@@ -1,0 +1,181 @@
+stop()
+
+instructionPpt_mc.isMinimizable = true
+instructionPpt_mc.isMinimized = true
+instructionPpt_mc.execInstructionPpt("kinetics_Velocity_Intro_InstrBk")
+
+var thisExpt_mc = this
+var origBallX:Number = ballAndTrack_mc.ball_mc._x
+var origBallY:Number = ballAndTrack_mc.ball_mc._y
+var secCount:Number = 0;
+
+var myMotion:clsGenericMotion = new clsGenericMotion()
+var myTrail:clsTrail = new clsTrail("KINETICS_SPEEDVEL", ballAndTrack_mc, boundary_mc)
+myTrail.trailPointColor = 0xFF0000
+myTrail.trailTickInterval = 40/2;
+
+var myVelocity1, myVelocity2:Number 
+
+this.onUnload = function() {
+	myMotion.stopMotion()	
+}
+x`
+
+speedGraph_mc.createSingleGraph(1/40,1/20,0,0);
+speedGraph_mc.setGraphPointProperties(1,1,0xFF0000)
+velocityGraph_mc.createSingleGraph(1/40,1/10,0,0);
+velocityGraph_mc.setGraphPointProperties(1,1,0x0000FF)
+
+velocityGraph_mc.y1_txt.text = "-8"
+velocityGraph_mc.y2_txt.text = "-4"
+velocityGraph_mc.y3_txt.text = "0"
+velocityGraph_mc.y4_txt.text = "4"
+velocityGraph_mc.y5_txt.text = "8"
+
+
+newQuestion()
+
+
+function newQuestion() {
+	next_btn._visible = false
+	go_btn._visible = true
+	totalDist = 0
+
+	speedGraph_mc.clearGraph(1)
+	velocityGraph_mc.clearGraph(1)
+	myTrail.eraseAllTrailMCs()
+	randomizeBallColor()
+	var mVelocity:Number
+	var mRand:Number 
+
+	while (true) {
+		myVelocity1 = int(Math.random()*5) + 5
+		myVelocity2 = int(Math.random()*5) + 5
+
+		if (myVelocity1 != myVelocity2) {
+			if (3*myVelocity1 > 2*myVelocity2) {
+				break
+			}
+		}
+	}
+	
+	
+	ballAndTrack_mc.ball_mc._x = origBallX
+	ballAndTrack_mc.ball_mc._y = origBallY
+	secCount = 0	
+
+	next_btn._visible = false
+	
+	
+}
+
+
+
+
+function randomizeBallColor() {
+	var mRand:Number = int(Math.random()*9)	+ 1
+	switch (mRand) {
+		case 1:
+			clsUtils.changeColorOfMovieClip(ballAndTrack_mc.ball_mc.ballImage_mc, [100,0,0,0,0,0,100,0])
+			break;
+			
+		case 2:
+			clsUtils.changeColorOfMovieClip(ballAndTrack_mc.ball_mc.ballImage_mc, [0,0,100,0,0,0,100,0])
+			break;
+
+		case 3:
+			clsUtils.changeColorOfMovieClip(ballAndTrack_mc.ball_mc.ballImage_mc, [0,0,0,0,100,0, 100,0])
+			break;
+			
+			
+		case 4:
+			clsUtils.changeColorOfMovieClip(ballAndTrack_mc.ball_mc.ballImage_mc, [100,0,100,0,0,0,100,0])
+			break;
+			
+		case 5:
+			clsUtils.changeColorOfMovieClip(ballAndTrack_mc.ball_mc.ballImage_mc, [100,0,0,0,100,0,100,0])
+			break;
+
+		case 6:
+			clsUtils.changeColorOfMovieClip(ballAndTrack_mc.ball_mc.ballImage_mc, [0,0,100,0,100,0,100,0])
+			break;
+
+		case 7:
+			clsUtils.changeColorOfMovieClip(ballAndTrack_mc.ball_mc.ballImage_mc, [100,0,50,0,25,0,100,0])
+			break;
+			
+		case 8:
+			clsUtils.changeColorOfMovieClip(ballAndTrack_mc.ball_mc.ballImage_mc, [25,0,100,0,50,0,100,0])
+			break;
+
+		case 9:
+			clsUtils.changeColorOfMovieClip(ballAndTrack_mc.ball_mc.ballImage_mc, [50,0,25,0,100,0,100,0])
+			break;
+			
+			
+			
+	}
+	
+	
+}
+
+
+
+
+go_btn.onPress = function() {
+
+
+	myMotion.xZero = 0
+	myMotion.yZero = 0
+	myMotion.vxZero = myVelocity1
+	myMotion.vyZero = 0
+	secCount = 0	
+	
+	myTrail.forceDropTrailImageAtXY("ballOutline_sym", ballAndTrack_mc.ball_mc._x, ballAndTrack_mc.ball_mc._y)
+	
+	myMotion.startVelocityBasedMotion() 
+	this._visible = false
+}
+
+
+
+myMotion.xVelocity = function():Number  {
+	if ( int(this.tValue*100 + 0.000001)/100 < 3) {
+		return myVelocity1
+	}
+	return -myVelocity2
+}
+
+myMotion.onTick = function(){
+	if (this.tValue >= 5.0) {
+		this.stopMotion()
+		next_btn._visible = true
+		
+		return
+	}
+	ballAndTrack_mc.ball_mc._x = origBallX + this.xValue*10
+	ballAndTrack_mc.ball_mc._y = origBallY
+	myTrail.dropTrailImageAtXY("ballOutline_sym", ballAndTrack_mc.ball_mc._x, ballAndTrack_mc.ball_mc._y)
+	velocityGraph_mc.addGraphPoint(1, this.tValue, this.vxValue)
+	speedGraph_mc.addGraphPoint(1, this.tValue, Math.abs(this.vxValue))
+
+
+}
+
+myTrail.afterTrailDropped = function(my_mc:MovieClip) {
+	my_mc.timeLabel_mc.timeLabel_txt.text = "" + secCount + " s"
+	secCount++
+}
+
+
+next_btn.onPress = function() {
+	newQuestion()
+}
+
+
+
+
+
+
+
+
