@@ -93,6 +93,19 @@ body[platform="ios"]{
   min-width: 130px;
 }
 
+.button_style {
+  color: var(--theme-pri-text-color);
+  background-color: var(--theme-pri-color);
+  border: 1px solid var(--theme-btn-border);
+  text-align: center;
+  margin: 7px;
+  width: 85px;
+  line-height: 1.2;
+}
+.button_style:hover {
+  color: var(--theme-pri-text-color);
+}
+
 .btn_launch:hover {
   color: var(--theme-pri-text-color);
 }
@@ -241,7 +254,7 @@ body[platform="ios"]{
   margin: 1em;
 }
 .container-so.main .exp_header .header h1 {
-  padding: 0.2em 0px;
+  padding: 0.5em 0px;
   margin: 0;
 }
 
@@ -561,68 +574,7 @@ svg .cls-4 {
 .btn_info:hover{
   outline: 1px solid var(--theme-btn-border);
 }
-/* svg:hover .cls-1 {
-  stroke: var(--theme-pri-color);
-}
-svg:hover .cls-2 {
-  stroke: var(--theme-pri-color);
-}
 
-svg:active .cls-1,
-svg:active .cls-2 svg:focus .cls-1,
-svg:focus .cls-2 {
-}
-
-.btn-wrap button:active svg .cls-1,
-.btn-wrap button:active svg .cls-2 {
-}
-.btn-wrap button:focus svg .cls-1,
-.btn-wrap button:focus svg .cls-2 {
-}
-
-.btn-wrap button.active svg .cls-1,
-.btn-wrap button.active svg .cls-2,
-.btn-wrap button:hover svg .cls-1,
-.btn-wrap button:hover svg .cls-2 {
-  stroke: var(--theme-pri-color);
-}
-
-.btn-theme-wrap button:active svg .cls-1,
-.btn-theme-wrap button:active svg .cls-2,
-.btn-theme-wrap button:active svg .cls-4 {
-}
-.btn-theme-wrap button:focus svg .cls-1,
-.btn-theme-wrap button:focus svg .cls-2,
-.btn-theme-wrap button:focus svg .cls-4 {
-}
-.btn-theme-wrap button:hover svg .cls-1,
-.btn-theme-wrap button:hover svg .cls-2,
-.btn-theme-wrap button:hover svg .cls-4 {
-  stroke: var(--theme-pri-color);
-}
-
-.btn-close-popup:active svg .cls-3,
-.btn-close-popup:hover svg .cls-3,
-.btn-close-popup:focus svg .cls-3,
-.btn-close-theme-popup:active svg .cls-3,
-.btn-close-theme-popup:hover svg .cls-3,
-.btn-close-theme-popup:focus svg .cls-3,
-.btn-close-cust-popup:active svg .cls-3,
-.btn-close-cust-popup:hover svg .cls-3,
-.btn-close-cust-popup:focus svg .cls-3 {
-  stroke: var(--theme-pri-color);
-}
-
-svg .cls-100 {
-  fill: var(--theme-pri-color);
-}
-svg .cls-101 {
-  fill: none;
-  stroke: var(--theme-pri-text-color);
-  stroke-linecap: round;
-  stroke-miterlimit: 10;
-  stroke-width: 2px;
-} */
 
 /* Guided Tour */
 

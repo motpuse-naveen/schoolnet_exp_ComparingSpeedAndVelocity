@@ -34,13 +34,13 @@ var ActivityShell = (function () {
       $(".container-so.launch").fadeOut();
       $(".container-so.main").show();
       this.AdjustContainerHeight();
-      ScreenSplitter.InitSplitter();
+      //ScreenSplitter.InitSplitter();
       GuidedTour.Init();
-      EvaluateAlgebraicExpressions.LaunchActivity();
+      //EvaluateAlgebraicExpressions.LaunchActivity();
       /* Scale Spring to fit */
-      ScreenSplitter.ScaleToFit($("#split-0"));
+      //ScreenSplitter.ScaleToFit($("#split-0"));
       /* Scale Graph to fit */
-      ScreenSplitter.ScaleToFit($("#split-1"));
+      //ScreenSplitter.ScaleToFit($("#split-1"));
     },
     AdjustContainerHeight: function () {
       var deviceType = ActivityShell.DeviceType();
@@ -128,21 +128,21 @@ var ActivityShell = (function () {
         $("#OK_btn, #btn_reset, #explain_btn, #next_btn").removeAttr("disabled");
       }
       /* Scale Spring to fit */
-      ScreenSplitter.ScaleToFit($("#split-0"));
+      //ScreenSplitter.ScaleToFit($("#split-0"));
       /* Scale Graph to fit */
-      ScreenSplitter.ScaleToFit($("#split-1"));
+      //ScreenSplitter.ScaleToFit($("#split-1"));
     },
     
     OnOrientationChange: function(){      
       this.AdjustContainerHeight();
-      ScreenSplitter.InitSplitter();
+      //ScreenSplitter.InitSplitter();
       if ($(".popup").is(":visible")) {
         this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"));
       }
       /* Scale Spring to fit */
-      ScreenSplitter.ScaleToFit($("#split-0"));
+      //ScreenSplitter.ScaleToFit($("#split-0"));
       /* Scale Graph to fit */
-      ScreenSplitter.ScaleToFit($("#split-1"));
+      //ScreenSplitter.ScaleToFit($("#split-1"));
       var deviceType = ActivityShell.DeviceType();
 
       //update Activity view OnOrientationChange
@@ -171,14 +171,14 @@ var ActivityShell = (function () {
       var deviceType = this.DeviceType();
       if(deviceType == "desktop"){
         this.AdjustContainerHeight();
-        ScreenSplitter.InitSplitter();
+        //ScreenSplitter.InitSplitter();
         if ($(".popup").is(":visible")) {
           this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"));
         }
         /* Scale Spring to fit */
-      ScreenSplitter.ScaleToFit($("#split-0"));
+      //ScreenSplitter.ScaleToFit($("#split-0"));
       /* Scale Graph to fit */
-      ScreenSplitter.ScaleToFit($("#split-1"));
+      //ScreenSplitter.ScaleToFit($("#split-1"));
       }
       GuidedTour.OnResize();
     },
@@ -232,9 +232,9 @@ $(document).on("click", ".btn-close-popup", function (event) {
   $(".active").removeClass("active")
   ActivityShell.AdjustSplitPanelsOnClosePopup($(this).closest(".popup"));
   /* Scale Spring to fit */
-  ScreenSplitter.ScaleToFit($("#split-0"));
+  //ScreenSplitter.ScaleToFit($("#split-0"));
   /* Scale Graph to fit */
-  ScreenSplitter.ScaleToFit($("#split-1"));
+  //ScreenSplitter.ScaleToFit($("#split-1"));
 
   $("#OK_btn, #btn_reset, #explain_btn, #next_btn").removeAttr("disabled");
 
