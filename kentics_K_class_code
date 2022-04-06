@@ -59,18 +59,12 @@ function newQuestion() {
 		}
 	}
 	
-	
 	ballAndTrack_mc.ball_mc._x = origBallX
 	ballAndTrack_mc.ball_mc._y = origBallY
 	secCount = 0	
 
 	next_btn._visible = false
-	
-	
 }
-
-
-
 
 function randomizeBallColor() {
 	var mRand:Number = int(Math.random()*9)	+ 1
@@ -111,20 +105,9 @@ function randomizeBallColor() {
 		case 9:
 			clsUtils.changeColorOfMovieClip(ballAndTrack_mc.ball_mc.ballImage_mc, [50,0,25,0,100,0,100,0])
 			break;
-			
-			
-			
 	}
-	
-	
 }
-
-
-
-
 go_btn.onPress = function() {
-
-
 	myMotion.xZero = 0
 	myMotion.yZero = 0
 	myMotion.vxZero = myVelocity1
@@ -136,9 +119,6 @@ go_btn.onPress = function() {
 	myMotion.startVelocityBasedMotion() 
 	this._visible = false
 }
-
-
-
 myMotion.xVelocity = function():Number  {
 	if ( int(this.tValue*100 + 0.000001)/100 < 3) {
 		return myVelocity1
@@ -150,7 +130,6 @@ myMotion.onTick = function(){
 	if (this.tValue >= 5.0) {
 		this.stopMotion()
 		next_btn._visible = true
-		
 		return
 	}
 	ballAndTrack_mc.ball_mc._x = origBallX + this.xValue*10
@@ -158,16 +137,12 @@ myMotion.onTick = function(){
 	myTrail.dropTrailImageAtXY("ballOutline_sym", ballAndTrack_mc.ball_mc._x, ballAndTrack_mc.ball_mc._y)
 	velocityGraph_mc.addGraphPoint(1, this.tValue, this.vxValue)
 	speedGraph_mc.addGraphPoint(1, this.tValue, Math.abs(this.vxValue))
-
-
 }
 
 myTrail.afterTrailDropped = function(my_mc:MovieClip) {
 	my_mc.timeLabel_mc.timeLabel_txt.text = "" + secCount + " s"
 	secCount++
 }
-
-
 next_btn.onPress = function() {
 	newQuestion()
 }

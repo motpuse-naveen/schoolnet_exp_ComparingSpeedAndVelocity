@@ -18,10 +18,11 @@ var ActivityShell = (function () {
       }
       if(deviceType=="mobile"){
         if (window.matchMedia("(orientation: portrait)").matches) {
-          $("#bestviewed_popup_msg").show();
+          $("#bestviewed_popup_msg").hide();
         }
         else{
-          $("#bestviewed_popup_msg").hide();
+          $("#bestviewed_popup_msg").show();
+          
         }
       }
       this.InitToolTip();
@@ -150,10 +151,10 @@ var ActivityShell = (function () {
       
       if(deviceType=="mobile"){
         if (window.matchMedia("(orientation: portrait)").matches) {
-          $("#bestviewed_popup_msg").show();
+          $("#bestviewed_popup_msg").hide();
         }
         else{
-          $("#bestviewed_popup_msg").hide();
+          $("#bestviewed_popup_msg").show();
         }
       }
       GuidedTour.OnResize();
