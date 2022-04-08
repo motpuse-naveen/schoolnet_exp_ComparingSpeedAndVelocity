@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.3 20.15"><defs><style>.cls-1{stroke:#75ea03;stroke-miterlimit:10;stroke-width:0.3px;fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="15.65" y1="24.4" x2="15.65" y2="-4.44" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#567f2e"/><stop offset="1" stop-color="#a4f456"/></linearGradient></defs><g id="Layer_2" data-name="Layer 2"><g id="Portrait"><g id="page-01"><g id="Layer_26" data-name="Layer 26"><circle cx="26.15" cy="16.15" r="4"/><circle cx="5.15" cy="16.15" r="4"/><polygon class="cls-1" points="31.15 0.15 0.15 0.15 0.15 16.15 13.05 16.15 15.65 19.65 18.25 16.15 31.15 16.15 31.15 0.15"/></g></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.3 20.15">
+    <defs>
+        <style>.cls-1{stroke:#75ea03;stroke-miterlimit:10;stroke-width:0.3px;fill:url(#linear-gradient);}</style>
+        <linearGradient id="linear-gradient" x1="15.65" y1="24.4" x2="15.65" y2="-4.44" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#567f2e"/>
+            <stop offset="1" stop-color="#a4f456"/>
+        </linearGradient>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Portrait">
+            <g id="page-01">
+                <g id="Layer_26" data-name="Layer 26">
+                    <circle cx="26.15" cy="16.15" r="4"/>
+                    <circle cx="5.15" cy="16.15" r="4"/>
+                    <polygon class="cls-1" points="31.15 0.15 0.15 0.15 0.15 16.15 13.05 16.15 15.65 19.65 18.25 16.15 31.15 16.15 31.15 0.15"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

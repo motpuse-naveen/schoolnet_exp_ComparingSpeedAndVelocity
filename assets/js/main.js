@@ -42,6 +42,10 @@ var ActivityShell = (function () {
       //ScreenSplitter.ScaleToFit($("#split-0"));
       /* Scale Graph to fit */
       //ScreenSplitter.ScaleToFit($("#split-1"));
+      SpeedVelocityChart.initSpeedVsTime([{ "x": 0, "y": 0 }], 280, 230);
+      SpeedVelocityChart.initVelocityVsTime([{ "x": 0, "y": 0 }], 280, 230);
+      SpeedVelocity.Launch();
+      
     },
     AdjustContainerHeight: function () {
       var deviceType = ActivityShell.DeviceType();

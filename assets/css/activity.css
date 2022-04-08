@@ -1,5 +1,5 @@
 .activityText{
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 .trailWrapper{
 
@@ -7,3 +7,159 @@
 .btn_next{
   display: none;
 }
+.scalewrapper{
+  text-align: center;
+}
+.scaleContainer{
+  width: 660px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 4rem;
+}
+.scaleimg{
+  width: 100%;
+}
+.trail, .trailback{
+  width: 1px;
+  position: absolute;
+}
+.trail{
+  left: 47px;
+  top: -30px;
+}
+.trailImg{
+  width: 46px;
+    left: -23px;
+    position: absolute;
+    top: 0px;
+}
+.trailback{
+  left: 47px;
+  top: -30px;
+}
+.vline{
+  height: 30px;
+  width: 1px;
+  background-color: black;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.vlinespan{
+  width: 34px;
+  height: 20px;
+  background-color: #679F37;
+  position: absolute;
+  left: -17px;
+  top: -44px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+}
+.graphContainer{
+  margin: 1rem;
+  border: 1px solid #D2D7DA;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  width: 330px;
+}
+.graphHead{
+  background-color: var(--theme-pri-color);
+  color: var(--theme-pri-text-color);
+  padding: 0.5em;
+  font-family: "Montserrat-Bold";
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.graphbody{
+  min-height: 80px;
+}
+
+.graphSpeedVsTime{}
+.graphVelocityVsTime{}
+
+
+/*Highchart*/
+.graphSpeedVsTime, .graphVelocityVsTime {
+  position: relative;
+  width: 360px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.highcharts-axis-title {
+  font-family: 'Montserrat-SemiBold';
+}
+#myChart{margin-left: 40px;}
+
+.yAxisLine {
+  position: absolute;
+  width: 1px;
+}
+.y-axis-arrow {
+  position: absolute;
+  height: 100%;
+  width: 15px;
+}
+.xAxisLine {
+  position: absolute;
+  height: 1px;
+}
+.x-axis-arrow {
+  position: absolute;
+  width: 100%;
+  height: 15px;
+}
+
+g.highcharts-axis-labels.highcharts-xaxis-labels text:first-child{
+  display: none;
+}
+.graphSpeedVsTime .yAxisLine {
+  height: 204px;
+  bottom: 50px;
+  left:0px;
+}
+.graphSpeedVsTime .y-axis-arrow {
+  height: 195px;
+  bottom: -3px;
+}
+.graphSpeedVsTime .xAxisLine {
+  width: 234px;
+  bottom: 62px;
+  left:0px;
+}
+.graphSpeedVsTime .x-axis-arrow {
+  top: 0px;
+  left:0px;
+}
+
+.graphVelocityVsTime .yAxisLine {
+  bottom: 33px;
+    height: 209px;
+}
+.graphVelocityVsTime .y-axis-arrow {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+}
+.graphVelocityVsTime .xAxisLine {
+  width: 234px;
+    bottom: 143px;
+}
+.graphVelocityVsTime .x-axis-arrow {
+  position: absolute;
+  width: 100%;
+}
+
+.graphContainer.leftmargin{
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.graphContainer.rightmargin{
+  margin-left: 1rem;
+  margin-right: auto;
+}
+.container-so.main .exp_footer .footer{
+  height: 48px;
+}
+
+/**/
