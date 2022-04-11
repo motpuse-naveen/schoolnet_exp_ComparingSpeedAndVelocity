@@ -180,7 +180,7 @@ var SpeedVelocityChart = (function () {
                 },
                 series: [{
                     name: "",
-                    color: "#CD5052",
+                    color: "#1600F7",
                     marker: {
                         enabled: false
                     },

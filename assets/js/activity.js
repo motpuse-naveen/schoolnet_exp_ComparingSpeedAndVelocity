@@ -3,12 +3,22 @@ var trailTickInterval = 40 / 2;
 var origBallX, origBallY
 var myVelocity1, myVelocity2;
 var MaxWidth = $(".scaleContainer").width();
+
+var tickInterval = null;
+var tickvalX = 0;
+var tickvalX2 = 0;
+
+var moveScaleVariable = Math.min(Math.abs(Number($(".scaleContainer").width()))/3.9009, 111);
+
+
 var SpeedVelocity = (function () {
     return {
         Launch: function () {
             origBallX = Number($(".trail").position().left);
             origBallY = Number($(".trail").position().top);
             MaxWidth = Math.abs(Number($(".scaleContainer").width()));
+            moveScaleVariable = Math.min(Math.abs(Number($(".scaleContainer").width()))/3.9009, 111);
+            alert(moveScaleVariable)
             secCount = 0;
             trailTickInterval = 40 / 2;
             newQuestion();
@@ -36,7 +46,10 @@ function newQuestion() {
             }
         }
     }
-    //alert(myVelocity1)
+    //myVelocity1 = Number(myVelocity1.toFixed(2))
+    //myVelocity2 =  Number(myVelocity2.toFixed(2))
+    //myVelocity1 = 10;
+    
     $(".trail").css({ "left": origBallX + "px" })
     $(".trail").css({ "top": origBallY + "px" })
     $(".trail").show();
@@ -44,128 +57,96 @@ function newQuestion() {
     $("#next_btn").hide()
 }
 
-function addTrailBack() {
-    var currPos = $(".trail").position();
-    var trailback = `
-                  <div class="trailback new">
-                    <div class="vline"></div>
-                    <img class="trailImg" src="assets/images/object_02.svg">
-                    <div class="vlinespan">`+ secCount + ` s</div>
-                  </div>
-                `
-    $(".scaleContainer").append(trailback)
-    $(".trailback.new").css({ "left": Math.abs(currPos.left), "top": currPos.top }).removeClass("new");
-    SpeedVelocityChart.updateSpeedVsTime({ x: secCount, y: Math.abs(xVelocity()) });
-    SpeedVelocityChart.updateVelocityVsTime({ x: secCount, y: xVelocity() });
-    if (secCount == 3) {
 
-    }
-    //SpringOscillationChart.update({ x: 0, y: myAmplitude / divisionfactor * -1 })
-    secCount++;
-    if (secCount == 4) {
-        $(".trail").stop();
-        SpeedVelocityChart.updateSpeedVsTime({ x: 3, y: Math.abs(xVelocity()) });
-        SpeedVelocityChart.updateVelocityVsTime({ x: 3, y: xVelocity() });
-
-        var currLeft = Math.abs(Number($(".trail").position().left));
-        //alert(currLeft)
-        var initTravelDist = MaxWidth - origBallX;
-        var leftPos = initTravelDist - currLeft;
-
-        AnimateToLeft(-leftPos)
-        //alert(leftPos)
-    }
-    if (secCount == 6) {
-        $(".trail").stop();
-        $("#btn_go").hide();
-        $("#next_btn").show()
-        clearInterval(tickInterval);
-        tickInterval = 0;
-    }
-}
-function xSpeed() {
-    //console.log("xSpeed:" + Number(secCount * 100 + 0.000001) / 100);
-    if (Number(secCount * 100 + 0.000001) / 100 < 4) {
-        return myVelocity1
-    }
-    return myVelocity2
-}
 function xVelocity() {
-    //console.log("xVelocity:" + Number(secCount * 100 + 0.000001) / 100);
     if (Number(secCount * 100 + 0.000001) / 100 < 4) {
         return myVelocity1
     }
     return -myVelocity2
 }
 
-function AnimateToRight(leftPos) {
-    $(".trail").animate({
-        left: leftPos
-    }, {
-        duration: myVelocity1 * 500,
-        easing: 'linear',
-        start: function () {
-            //addTrailBack();
-            //StartTickInterval();
-        },
-        step: function (now, fx) {
-            //console.log(now);
-        },
-        complete: function () {
-            $(this).hide();
-            $("#next_btn").show()
-            clearInterval(tickInterval);
-            tickInterval = 0;
-        }
-    });
-}
-function AnimateToLeft(leftPos) {
-    $(".trail").animate({
-        left: leftPos
-    }, {
-        duration: myVelocity2 * 500,
-        easing: 'linear',
-        start: function () {
-            //addTrailBack();
-            //StartTickInterval();
-        },
-        step: function (now, fx) {
-
-        },
-        complete: function () {
-            $(this).hide();
-            $("#next_btn").show()
-            clearInterval(tickInterval);
-            tickInterval = 0;
-        }
-    });
-}
-
-var tickInterval = null;
-
-function StartTickInterval() {
+var GlobalSpeed = 0
+function StartTickInterval(myspeed, moveback) {
+    GlobalSpeed = myspeed;
     tickInterval = setInterval(function () {
-        addTrailBack();
-    }, 600)
+        var varTickValX = (GlobalSpeed / 1000);
+        var varTickValX2Int = (10 / 1000);
+        addTrailBack(varTickValX, varTickValX2Int, moveback);
+    }, 10)
+}
+
+function addTrailBack(paramTickValX, paramTickValX2Int, parammoveback) {
+    paramTickValX2Int = Number(Number(paramTickValX2Int).toFixed(4));
+    tickvalX = tickvalX + paramTickValX;
+    tickvalX2 = tickvalX2 + paramTickValX2Int;
+    tickvalX2 = Number(tickvalX2.toFixed(2));
+    console.log(tickvalX + ", " + tickvalX2)
+    
+    var posleft = $(".trail").position().left;
+    //console.log(paramtickvalXInt)
+    if (parammoveback > 0) {
+        $(".trail").css({ "left": posleft + (paramTickValX * moveScaleVariable) })
+    }
+    else {
+        $(".trail").css({ "left": posleft - (paramTickValX * moveScaleVariable) })
+    }
+    //console.log(tickvalX);
+    if (tickvalX2 == 0 || tickvalX2 == 1 || tickvalX2 == 2 ||
+        tickvalX2 == 3 || tickvalX2 == 4 || tickvalX2 == 5) {
+        var currPos = $(".trail").position();
+        var trailback = `
+                  <div class="trailback new">
+                    <div class="vline"></div>
+                    <img class="trailImg" src="assets/images/object_02.svg">
+                    <div class="vlinespan">`+ secCount + ` s</div>
+                  </div>
+                `
+        $(".scaleContainer").append(trailback)
+        $(".trailback.new").css({ "left": Math.abs(currPos.left), "top": currPos.top }).removeClass("new");
+        secCount++;
+    }
+    SpeedVelocityChart.updateSpeedVsTime({ x: tickvalX2, y: Math.abs(xVelocity()) });
+    SpeedVelocityChart.updateVelocityVsTime({ x: tickvalX2, y: xVelocity() });
+
+
+    if (tickvalX2 == 3) {
+        SpeedVelocityChart.updateSpeedVsTime({ x: 3, y: Math.abs(xVelocity()) });
+        SpeedVelocityChart.updateVelocityVsTime({ x: 3, y: xVelocity() });
+
+        clearInterval(tickInterval);
+        tickInterval = 0;
+        StartTickInterval(myVelocity2, -1)
+    }
+    if (tickvalX2 > 5) {
+        $(".trail").hide();
+        $("#btn_go").hide();
+        $("#next_btn").show()
+        clearInterval(tickInterval);
+        tickInterval = 0;
+    }
 }
 
 $(document).on("click", "#btn_go", function (event) {
-    /*myMotion_xZero = 0
-    myMotion_yZero = 0
-    myMotion_vxZero = myVelocity1
-    myMotion_vyZero = 0*/
     secCount = 0
-
-    //$( ".block" ).animate({ "left": "+=1px" }, myVelocity1 );
-    addTrailBack();
-    StartTickInterval();
-    AnimateToRight(MaxWidth);
-    //var ff = 56/0;
-    //myTrail.forceDropTrailImageAtXY("ballOutline_sym", ballAndTrack_mc.ball_mc._x, ballAndTrack_mc.ball_mc._y)
-    //myMotion.startVelocityBasedMotion()
+    tickvalX = 0;
+    tickvalX2 = 0;
+    addTrailBack(0, 0, 1);
+    StartTickInterval(myVelocity1, 1);
     $(this).hide();
 });
 
 $(document).on("click", "#next_btn", function (event) {
     newQuestion();
 });
+
+$(document).on("click", ".linkactivityTextMore", function(){
+    $(".mobiledevice.less").hide();
+    $(".mobiledevice.more").slideDown("slow","linear", function(){
+
+    });
+})
+$(document).on("click", ".linkactivityTextLess", function(){
+    $(".mobiledevice.more").slideUp("slow","linear", function(){
+        $(".mobiledevice.less").fadeIn();
+    });
+})

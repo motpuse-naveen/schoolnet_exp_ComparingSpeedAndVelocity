@@ -13,6 +13,9 @@ var imgPreloadArray = new Array(
   "assets/images/theme-icon-outline-left.svg",
   "assets/images/theme-icon-outline-right.svg",
   "assets/images/watermark-2.png",
+  "assets/images/instr-graph1.png",
+  "assets/images/instr-graph2.png",
+  "assets/images/instr-scale.png",
 );
 
 /*--Audio--*/

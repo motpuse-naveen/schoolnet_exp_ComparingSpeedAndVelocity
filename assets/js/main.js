@@ -36,7 +36,7 @@ var ActivityShell = (function () {
       $(".container-so.main").show();
       this.AdjustContainerHeight();
       //ScreenSplitter.InitSplitter();
-      GuidedTour.Init();
+      //GuidedTour.Init();
       //EvaluateAlgebraicExpressions.LaunchActivity();
       /* Scale Spring to fit */
       //ScreenSplitter.ScaleToFit($("#split-0"));
@@ -141,9 +141,9 @@ var ActivityShell = (function () {
     OnOrientationChange: function(){      
       this.AdjustContainerHeight();
       //ScreenSplitter.InitSplitter();
-      if ($(".popup").is(":visible")) {
+      /*if ($(".popup").is(":visible")) {
         this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"));
-      }
+      }*/
       /* Scale Spring to fit */
       //ScreenSplitter.ScaleToFit($("#split-0"));
       /* Scale Graph to fit */
@@ -151,7 +151,7 @@ var ActivityShell = (function () {
       var deviceType = ActivityShell.DeviceType();
 
       //update Activity view OnOrientationChange
-      EvaluateAlgebraicExpressions.OnOrientationChange();
+      //EvaluateAlgebraicExpressions.OnOrientationChange();
       
       if(deviceType=="mobile"){
         if (window.matchMedia("(orientation: portrait)").matches) {
@@ -177,9 +177,10 @@ var ActivityShell = (function () {
       if(deviceType == "desktop"){
         this.AdjustContainerHeight();
         //ScreenSplitter.InitSplitter();
+        /*
         if ($(".popup").is(":visible")) {
           this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"));
-        }
+        }*/
         /* Scale Spring to fit */
       //ScreenSplitter.ScaleToFit($("#split-0"));
       /* Scale Graph to fit */
@@ -235,7 +236,7 @@ $(document).on("click", "#btn_procedure", function (event) {
 $(document).on("click", ".btn-close-popup", function (event) {
   $(this).closest(".popup").hide();
   $(".active").removeClass("active")
-  ActivityShell.AdjustSplitPanelsOnClosePopup($(this).closest(".popup"));
+  //ActivityShell.AdjustSplitPanelsOnClosePopup($(this).closest(".popup"));
   /* Scale Spring to fit */
   //ScreenSplitter.ScaleToFit($("#split-0"));
   /* Scale Graph to fit */

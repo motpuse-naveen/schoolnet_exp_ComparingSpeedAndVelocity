@@ -276,6 +276,7 @@ body[platform="ios"]{
 .container-so.main .exp_body .split {
   height: 100%;
   position: relative;
+  overflow: auto;
 }
 .btn_info,
 .btn_themes {
@@ -422,7 +423,7 @@ div.btn-theme-wrap .btn_themes {
   position: absolute;
   bottom: 0px;
   border-top: 1px solid var(--theme-popup-border);
-  z-index: 4;
+  z-index: 24;
   outline: 1px solid var(--theme-popup-border);
 }
 .cust-popup.settings {
