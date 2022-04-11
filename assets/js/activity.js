@@ -18,7 +18,7 @@ var SpeedVelocity = (function () {
             origBallY = Number($(".trail").position().top);
             MaxWidth = Math.abs(Number($(".scaleContainer").width()));
             moveScaleVariable = Math.min(Math.abs(Number($(".scaleContainer").width()))/3.9009, 111);
-            alert(moveScaleVariable)
+            //alert(moveScaleVariable)
             secCount = 0;
             trailTickInterval = 40 / 2;
             newQuestion();

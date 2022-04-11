@@ -36,7 +36,7 @@ var ActivityShell = (function () {
       $(".container-so.main").show();
       this.AdjustContainerHeight();
       //ScreenSplitter.InitSplitter();
-      //GuidedTour.Init();
+      GuidedTour.Init();
       //EvaluateAlgebraicExpressions.LaunchActivity();
       /* Scale Spring to fit */
       //ScreenSplitter.ScaleToFit($("#split-0"));
@@ -202,12 +202,14 @@ var ActivityShell = (function () {
 $(document).ready(function () {
   //ActivityShell.Init();
 });
+/*
 document.ontouchmove = function(event){
   try{
     event.preventDefault();
   }
   catch(err){}
 }
+*/
 
 $(window).bind('orientationchange', function () {
   this.setTimeout(function () {

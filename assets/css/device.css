@@ -57,7 +57,7 @@
   width: 95%;
   margin: 0 auto;
   position: relative;
-  margin-top: 2rem;
+  margin-top: 4rem;
   max-width: 95%;
 }
 
@@ -391,14 +391,14 @@
   }
 }
 
-@media screen and (orientation: portrait) and (min-device-height: 810px) {
+@media screen and (orientation: portrait) and (min-device-height: 890px) {
   .rowGraphContainer {
-    transform: scale(0.9);
+    transform: scale(0.8);
     transform-origin: center top;
     height: 300px;
   }
   .graphWrapper{
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 }
 
