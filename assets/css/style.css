@@ -235,6 +235,8 @@ body[platform="ios"]{
 }
 .container-so.main .exp_header .header .head-pan-container {
   display: flex;
+  padding: 0px;
+  height: 61px;
 }
 .container-so.main .exp_header .header .leftpan {
   border-right: 1px solid var(--theme-popup-border);
@@ -644,5 +646,11 @@ svg .cls-4 {
 
 .answer_val{
   color: #bc0000 !important;
+}
+.activity-page-expl-logo
+{
+  height: 61px;
+  padding: 10px;
+  background: #000;
 }
 

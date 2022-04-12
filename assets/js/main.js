@@ -156,6 +156,7 @@ var ActivityShell = (function () {
       if(deviceType=="mobile"){
         if (window.matchMedia("(orientation: portrait)").matches) {
           $("#bestviewed_popup_msg").hide();
+          setScaleValue();
         }
         else{
           $("#bestviewed_popup_msg").show();

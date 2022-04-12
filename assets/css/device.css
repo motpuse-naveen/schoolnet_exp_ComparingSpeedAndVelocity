@@ -400,6 +400,11 @@
   .graphWrapper{
     margin-top: 1rem;
   }
+  .activity-page-expl-logo {
+    height: 61px;
+    padding: 15px 10px;
+    background: #000;
+  }
 }
 
 @media screen and (orientation: landscape) and (max-device-height: 610px) {
@@ -420,6 +425,7 @@
   .graphWrapper {
     max-height: 200px;
   }
+  
 
   /*
   --Appa android landscape

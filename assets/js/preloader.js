@@ -3,6 +3,7 @@ var imagePreCount = 0;
 var audioPreCount = 0;
 var imgPreloadArray = new Array(
   "assets/images/logo.svg",
+  "assets/images/exploriment-Logo.svg",
   "assets/images/Numberline_01.svg",
   "assets/images/Numberline_02.svg",
   "assets/images/Object_01.svg",

@@ -22,6 +22,12 @@ var SpeedVelocity = (function () {
             secCount = 0;
             trailTickInterval = 40 / 2;
             newQuestion();
+            var deviceType = ActivityShell.DeviceType();
+            if(deviceType=="mobile"){
+                if (window.matchMedia("(orientation: portrait)").matches) {
+                    setScaleValue()
+                }
+            }
         }
     }
 })();
@@ -150,3 +156,35 @@ $(document).on("click", ".linkactivityTextLess", function(){
         $(".mobiledevice.less").fadeIn();
     });
 })
+
+function setScaleValue(){
+    var graphPos = $(".graphWrapper").position();
+    var wrapht = $(".exp_body_content").height();
+    var wrapwdt = $(".exp_body_content").width();
+    var graphHt = $(".rowGraphContainer .col").height()
+
+    var elmSize = {
+        width: wrapwdt,
+        height: graphHt + graphHt + 30
+    }
+    var scale;
+    var wrapperSize = {
+        width: wrapwdt,
+        height: wrapht - graphPos.top
+    }
+    scale = Math.min(
+        wrapperSize.width/elmSize.width,
+        wrapperSize.height/elmSize.height
+    );
+    if (scale < 1) {
+        $(".rowGraphContainer").css({
+            transform: "scale(" + scale + ")"
+        });
+    }
+    else{
+        scale = 1;
+        $(".rowGraphContainer").css({
+            "transform": "scale(" + scale + ")"
+        });
+    }
+}
