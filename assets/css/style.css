@@ -292,7 +292,7 @@ body[platform="ios"]{
 .btn-theme-wrap {
   position: absolute;
   right: 0px;
-  top: 8px;
+  top: 7px;
   z-index: 20;
 }
 .btn_themes {
