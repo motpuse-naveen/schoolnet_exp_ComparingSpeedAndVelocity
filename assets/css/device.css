@@ -57,7 +57,7 @@
   width: 95%;
   margin: 0 auto;
   position: relative;
-  margin-top: 4rem;
+  margin-top: 5rem;
   max-width: 95%;
 }
 
@@ -112,20 +112,21 @@
   margin-left: auto;
   margin-right: 1rem;
   margin: auto;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .graphContainer.rightmargin {
   margin-left: 1rem;
   margin-right: auto;
   margin: auto;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .rowGraphContainer {
   transform: scale(0.69);
   transform-origin: center top;
-  height: 300px;
+  height: auto;
+  padding-bottom: 2rem;
 }
 
 .exp_body_header {
@@ -197,7 +198,7 @@
     width: 655px;
     margin: 0 auto;
     position: relative;
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 
   .scaleimg {
@@ -251,20 +252,20 @@
     margin-left: auto;
     margin-right: 1rem;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .graphContainer.rightmargin {
     margin-left: 1rem;
     margin-right: auto;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .rowGraphContainer {
     transform: scale(1);
     transform-origin: center top;
-    height: 300px;
+    height: auto;
   }
 
   .exp_body_header {
@@ -323,7 +324,7 @@
   }
 
   .activityText {
-    padding: 1rem 1rem;
+    padding: 0.5em 1em;
   }
 }
 
@@ -344,7 +345,7 @@
 
   .graphContainer.leftmargin {
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-left: auto;
     margin-right: 1rem;
 
@@ -352,10 +353,18 @@
 
   .graphContainer.rightmargin {
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-left: 1rem;
     margin-right: auto;
    
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .activity-page-expl-logo {
+    height: 72px;
+    padding: 10px 5px 10px 16px;
+    background: #000;
   }
 }
 
@@ -395,15 +404,10 @@
   .rowGraphContainer {
     transform: scale(0.8);
     transform-origin: center top;
-    height: 300px;
+    height: auto;
   }
   .graphWrapper{
     margin-top: 1rem;
-  }
-  .activity-page-expl-logo {
-    height: 61px;
-    padding: 15px 10px;
-    background: #000;
   }
 }
 
@@ -415,7 +419,7 @@
   .rowGraphContainer {
     transform: scale(0.7);
     transform-origin: center top;
-    height: 300px;
+    height: auto;
   }
 
   .activityText {
@@ -425,13 +429,5 @@
   .graphWrapper {
     max-height: 200px;
   }
-  
 
-  /*
-  --Appa android landscape
-  .btn_skip_gt{
-    right: 20px !important;
-    top: 20px !important;
-    left: auto !important;
-  }*/
 }

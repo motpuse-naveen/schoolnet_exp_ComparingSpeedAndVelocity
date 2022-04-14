@@ -17,6 +17,11 @@ var imgPreloadArray = new Array(
   "assets/images/instr-graph1.png",
   "assets/images/instr-graph2.png",
   "assets/images/instr-scale.png",
+  "assets/images/A_01.svg",
+  "assets/images/A_02.svg",
+  "assets/images/A_03.svg",
+  "assets/images/A_04.svg",
+  "assets/images/A_05.svg",
 );
 
 /*--Audio--*/
