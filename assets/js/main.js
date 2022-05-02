@@ -1,4 +1,8 @@
 const POPUP_WIDTH = 280;
+var zoom1 = null;
+var zoom2 = null;
+var zoom3 = null;
+var zoom4 = null;
 var ActivityShell = (function () {
   return {
     Init: function () {
@@ -26,8 +30,10 @@ var ActivityShell = (function () {
         }
       }
       this.InitToolTip();
+      this.AdjustSmallTablet();
     },
     LaunchActivity: function () {
+      $(".wrapper").addClass("activity");
       var deviceType = ActivityShell.DeviceType();
       if (deviceType == "mobile") {
         //openFullscreen()
@@ -45,7 +51,23 @@ var ActivityShell = (function () {
       SpeedVelocityChart.initSpeedVsTime([{ "x": 0, "y": 0 }], 280, 230);
       SpeedVelocityChart.initVelocityVsTime([{ "x": 0, "y": 0 }], 280, 230);
       SpeedVelocity.Launch();
-      
+      /*
+      if (zoom1 == null) {
+        hammerIt(document.querySelector(".zoom1"));
+        zoom1 = "zoom1";
+        //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
+      }
+      if (zoom2 == null) {
+        hammerIt(document.querySelector(".zoom2"));
+        zoom2 = "zoom2";
+        //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
+      }
+      if (zoom3 == null) {
+        hammerIt(document.querySelector(".zoom3"));
+        zoom3 = "zoom1";
+        //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
+      }
+      */
     },
     AdjustContainerHeight: function () {
       var deviceType = ActivityShell.DeviceType();
@@ -76,6 +98,14 @@ var ActivityShell = (function () {
         $(".exp_body_content").css({ "height": (mainHt - (headerHt + footerHt))});
       }
     },
+    AdjustSmallTablet: function(){
+      $(".wrapper").removeClass("small-height-landscape").removeClass("extra-small-height-landscape")
+      var bodyHt = $("body").height()
+      bodyHt = Number(bodyHt)
+      if(bodyHt<440){
+        $(".wrapper").addClass("small-height-landscape")
+      }
+    },
     DeviceType: function () {
       /* This function needs changes in device detection logic 
       below code is not working for ipad it returns desktop */
@@ -95,12 +125,15 @@ var ActivityShell = (function () {
     },
     AdjustSplitPanelsOnOpenPopup: function ($popup) {
       var deviceType = ActivityShell.DeviceType();
+      var settingPanelHt = 0;
       if (deviceType != "mobile") {
         if ($("#split-main").length > 0) {
           var spltWdt = $(".wrapper").width();
-          $("#split-main").css({ "width": spltWdt - POPUP_WIDTH });
+          $("#split-main").css({ "width": spltWdt - POPUP_WIDTH })
+          settingPanelHt = $(".cust-popup.settings").outerHeight();
+          $popup.css({ "padding-bottom": settingPanelHt + 10 })
         }
-        // $popup.addClass("right_align_popup");
+        $popup.addClass("right_align_popup")
       }
     },
     AdjustSplitPanelsOnClosePopup: function ($popup) {
@@ -115,7 +148,7 @@ var ActivityShell = (function () {
         $("#split-main").css({ "height": "100%" });
       }
     }, 
-    TogglePopup: function($popup, $button){
+    /*TogglePopup: function($popup, $button){
       if (!$popup.is(":visible")) {
         $(".popup").hide();
         $(".active").removeClass("active")
@@ -132,27 +165,37 @@ var ActivityShell = (function () {
         $button.removeClass("active");
         $("#OK_btn, #btn_reset, #explain_btn, #next_btn").removeAttr("disabled");
       }
-      /* Scale Spring to fit */
-      //ScreenSplitter.ScaleToFit($("#split-0"));
-      /* Scale Graph to fit */
-      //ScreenSplitter.ScaleToFit($("#split-1"));
+    },*/
+    TogglePopup: function ($popup, $button) {
+      //debugger;
+      if (!$popup.is(":visible")) {
+        $(".popup").hide();
+        $(".active").removeClass("active")
+        var deviceType = ActivityShell.DeviceType();
+        if (deviceType == "mobile") {
+          if ($(".cust-popup").is(":visible")) {
+            $(".cust-popup").hide();
+            $(".calculationsCol").hide();
+            $(".settingsCol").hide();
+            ActivityShell.AdjustSplitPanelsOnCloseCustomPopup()
+          }
+        }
+        $popup.fadeIn();
+        $button.addClass("active")
+        ActivityShell.AdjustSplitPanelsOnOpenPopup($popup)
+      }
+      else {
+        $popup.hide();
+        $button.removeClass("active")
+        ActivityShell.AdjustSplitPanelsOnClosePopup($popup)
+      }
     },
-    
     OnOrientationChange: function(){      
       this.AdjustContainerHeight();
-      //ScreenSplitter.InitSplitter();
-      /*if ($(".popup").is(":visible")) {
-        this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"));
-      }*/
-      /* Scale Spring to fit */
-      //ScreenSplitter.ScaleToFit($("#split-0"));
-      /* Scale Graph to fit */
-      //ScreenSplitter.ScaleToFit($("#split-1"));
+      if ($(".popup").is(":visible")) {
+        this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"))
+      }
       var deviceType = ActivityShell.DeviceType();
-
-      //update Activity view OnOrientationChange
-      //EvaluateAlgebraicExpressions.OnOrientationChange();
-      
       if(deviceType=="mobile"){
         if (window.matchMedia("(orientation: portrait)").matches) {
           $("#bestviewed_popup_msg").hide();
@@ -163,6 +206,7 @@ var ActivityShell = (function () {
         }
       }
       GuidedTour.OnResize();
+      this.AdjustSmallTablet();
     },
     IsIOSDevice: function(){
       if (/iPad|iPhone|iPod/.test(navigator.platform)) {
@@ -239,14 +283,10 @@ $(document).on("click", "#btn_procedure", function (event) {
 $(document).on("click", ".btn-close-popup", function (event) {
   $(this).closest(".popup").hide();
   $(".active").removeClass("active")
-  //ActivityShell.AdjustSplitPanelsOnClosePopup($(this).closest(".popup"));
-  /* Scale Spring to fit */
-  //ScreenSplitter.ScaleToFit($("#split-0"));
+  ActivityShell.AdjustSplitPanelsOnClosePopup($(this).closest(".popup"));
   /* Scale Graph to fit */
-  //ScreenSplitter.ScaleToFit($("#split-1"));
-
+  //ScreenSplitter.ScaleToFit($("#split-main"));
   $("#OK_btn, #btn_reset, #explain_btn, #next_btn").removeAttr("disabled");
-
 });
 /*End Common Popup Script */
 

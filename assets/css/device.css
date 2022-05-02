@@ -54,11 +54,11 @@
 }
 
 .scaleContainer {
-  width: 95%;
+  width: 357px;
   margin: 0 auto;
   position: relative;
   margin-top: 5rem;
-  max-width: 95%;
+  /*max-width: 357px;*/
 }
 
 .scaleimg {
@@ -126,7 +126,7 @@
   transform: scale(0.69);
   transform-origin: center top;
   height: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .exp_body_header {
@@ -195,7 +195,7 @@
   }
 
   .scaleContainer {
-    width: 655px;
+    width: 530px;
     margin: 0 auto;
     position: relative;
     margin-top: 5rem;
@@ -211,7 +211,7 @@
   }
 
   .trail {
-    left: 47px;
+    left: 37px;
     top: -30px;
   }
 
@@ -223,7 +223,7 @@
   }
 
   .trailback {
-    left: 47px;
+    left: 37px;
     top: -30px;
   }
 
@@ -326,6 +326,60 @@
   .activityText {
     padding: 0.5em 1em;
   }
+  .scaleContainer {
+    width: 655px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 5rem;
+  }
+
+  .scaleimg {
+    width: 100%;
+  }
+
+  .trail, .trailback {
+    width: 1px;
+    position: absolute;
+  }
+
+  .trail {
+    left: 47px;
+    top: -30px;
+  }
+
+  .trailImg {
+    width: 46px;
+    left: -23px;
+    position: absolute;
+    top: 0px;
+  }
+
+  .trailback {
+    left: 47px;
+    top: -30px;
+  }
+
+  .vline {
+    height: 30px;
+    width: 1px;
+    background-color: black;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+
+  .vlinespan {
+    width: 34px;
+    height: 20px;
+    background-color: #679F37;
+    position: absolute;
+    left: -17px;
+    top: -44px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+  }
+
 }
 
 @media only screen and (min-width: 960px) {
@@ -377,7 +431,7 @@
   }
 
   .wrapper[device="tablet"] .container-so.main .exp_header .header .main-src-logo {
-    width: 64px;
+    /*width: 64px;*/
     margin: 0em 0.5em;
   }
 }
@@ -391,7 +445,7 @@
   }
 
   .wrapper[device="tablet"] .container-so.main .exp_header .header .main-src-logo {
-    width: 64px;
+    /*width: 64px;*/
     margin: 0em 0.5em;
   }
 

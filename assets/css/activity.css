@@ -88,7 +88,7 @@ g.highcharts-axis-labels.highcharts-xaxis-labels text:first-child{
 }
 .graphSpeedVsTime .xAxisLine {
   width: 234px;
-  bottom: 62px;
+  top: 183px;
   left:0px;
 }
 .graphSpeedVsTime .x-axis-arrow {
@@ -107,7 +107,7 @@ g.highcharts-axis-labels.highcharts-xaxis-labels text:first-child{
 }
 .graphVelocityVsTime .xAxisLine {
   width: 234px;
-    bottom: 143px;
+    bottom: 144px;
 }
 .graphVelocityVsTime .x-axis-arrow {
   position: absolute;

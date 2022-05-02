@@ -95,11 +95,13 @@ var SpeedVelocityChart = (function () {
             $("#graphSpeedVsTime").append(yaxishtml)
             $("#graphSpeedVsTime").append(xaxishtml)
             //NM: Add custom axis Lines
-            var yaxispath = $("g.highcharts-axis.highcharts-yaxis path.highcharts-axis-line").attr("d")
-            var axisLeft = yaxispath.split(" ")[1];
-
-            $("#graphSpeedVsTime .yAxisLine").css({ "left": (Number(axisLeft) - 8) + "px" });
-            $("#graphSpeedVsTime .xAxisLine").css({ "left": (Number(axisLeft) - 1) + "px" });
+            var axisX = $("#graphSpeedVsTime .highcharts-plot-border").attr("x")
+            var axisY = $("#graphSpeedVsTime .highcharts-plot-border").attr("y")
+            var plotAreaHt = $("#graphSpeedVsTime    .highcharts-plot-border").attr("height")
+            var axisTop = Number(plotAreaHt) + Number(axisY) + 20 - 8 ; // 20-toppadding, 8-axis image height/2
+            var yaxisTop = axisTop - ($("#graphSpeedVsTime .yAxisLine").height()-12)
+            $("#graphSpeedVsTime .yAxisLine").css({ "left": (Number(axisX) - 8) + "px", "top": (yaxisTop + 1) + "px" });
+            $("#graphSpeedVsTime .xAxisLine").css({ "left": (Number(axisX) - 0) + "px", "top": (axisTop + 1) + "px"});
             //$(".highcharts-background").attr({"fill":"transparent"});
         },
         initVelocityVsTime: function (pdata, pwidth, pheight) {
@@ -195,10 +197,14 @@ var SpeedVelocityChart = (function () {
             $("#graphVelocityVsTime").append(xaxishtml)
 
             //NM: Add custom axis Lines
-            var yaxispath = $("g.highcharts-axis.highcharts-yaxis path.highcharts-axis-line").attr("d")
-            var axisLeft = yaxispath.split(" ")[1];
-            $("#graphVelocityVsTime .yAxisLine").css({ "left": (Number(axisLeft) - 5) + "px" });
-            $("#graphVelocityVsTime .xAxisLine").css({ "left": (Number(axisLeft) + 2) + "px" });
+            //var yaxispath = $("g.highcharts-axis.highcharts-yaxis path.highcharts-axis-line").attr("d")
+            //var axisLeft = yaxispath.split(" ")[1];
+            var axisX = $("#graphVelocityVsTime .highcharts-plot-border").attr("x")
+            var axisY = $("#graphVelocityVsTime .highcharts-plot-border").attr("y")
+            var plotAreaHt = $("#graphVelocityVsTime .highcharts-plot-border").attr("height")
+
+            $("#graphVelocityVsTime .yAxisLine").css({ "left": (Number(axisX) - 8) + "px" });
+            $("#graphVelocityVsTime .xAxisLine").css({ "left": (Number(axisX) + 0) + "px" });
             //$(".highcharts-background").attr({"fill":"transparent"});
             //$(".highcharts-axis-labels.highcharts-xaxis-labels text:")
         },
