@@ -1,5 +1,8 @@
-function hammerIt(elm) {
-    hammertime = new Hammer(elm, {});
+function hammerIt(elm, p_maxScale) {
+    hammertime = new Hammer(elm, {
+        prevent_default: true
+        //touchAction: "pan"
+    });
     hammertime.get('pinch').set({
         enable: true
     });
@@ -14,8 +17,12 @@ function hammerIt(elm) {
         transform = "",
         el = elm;
 
+
+    if(typeof p_maxScale == 'undefined')
+        p_maxScale = 4
+
     hammertime.on('doubletap pan pinch panend pinchend', function (ev) {
-        if (ev.type == "doubletap") {
+        /*if (ev.type == "doubletap") {
             transform =
                 "translate3d(0, 0, 0) " +
                 "scale3d(2, 2, 1) ";
@@ -32,9 +39,10 @@ function hammerIt(elm) {
             } catch (err) { }
             el.style.webkitTransform = transform;
             transform = "";
-        }
+        }*/
 
-        //pan    
+        //pan  
+        //alert(ev.type);
         if (scale != 1) {
             posX = last_posX + ev.deltaX;
             posY = last_posY + ev.deltaY;
@@ -57,7 +65,7 @@ function hammerIt(elm) {
 
         //pinch
         if (ev.type == "pinch") {
-            scale = Math.max(.999, Math.min(last_scale * (ev.scale), 4));
+            scale = Math.max(.999, Math.min(last_scale * (ev.scale), p_maxScale));
         }
         if (ev.type == "pinchend") { last_scale = scale; }
 

@@ -67,6 +67,11 @@ var ActivityShell = (function () {
         zoom3 = "zoom1";
         //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
       }
+      if (zoom4 == null) {
+        hammerIt(document.querySelector(".zoom4"));
+        zoom3 = "zoom4";
+        //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
+      }
       */
     },
     AdjustContainerHeight: function () {
@@ -190,7 +195,8 @@ var ActivityShell = (function () {
         ActivityShell.AdjustSplitPanelsOnClosePopup($popup)
       }
     },
-    OnOrientationChange: function(){      
+    OnOrientationChange: function(){     
+      $("#split-main").removeAttr("style");
       this.AdjustContainerHeight();
       if ($(".popup").is(":visible")) {
         this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"))
@@ -245,7 +251,24 @@ var ActivityShell = (function () {
 })();
 
 $(document).ready(function () {
-  //ActivityShell.Init();
+  ActivityShell.Init();
+  /*
+  document.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+  });
+  document.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+  });
+  
+  if (zoomhtml == null) {
+    hammerIt(document.querySelector("html"),1);
+    zoomhtml = "zoomhtml";
+  }
+  if (zoombody == null) {
+    hammerIt(document.querySelector("body"),1);
+    zoombody = "zoombody";
+  }
+  */
 });
 /*
 document.ontouchmove = function(event){

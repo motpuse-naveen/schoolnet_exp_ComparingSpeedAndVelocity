@@ -483,5 +483,10 @@
   .graphWrapper {
     max-height: 200px;
   }
+  .graphContainer.leftmargin,
+  .graphContainer.rightmargin{
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 }

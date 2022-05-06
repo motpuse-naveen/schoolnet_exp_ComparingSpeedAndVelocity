@@ -9,6 +9,7 @@
 }
 .scalewrapper{
   text-align: center;
+  display: flex;
 }
 
 /*
@@ -119,4 +120,13 @@ g.highcharts-axis-labels.highcharts-xaxis-labels text:first-child{
   height: 48px;
 }
 
+.instr-scale-wrapper{
+  overflow: hidden;
+}
+.graphContainer{
+  overflow: hidden;
+}
+.trailWrapper{
+  overflow: hidden;
+}
 /**/

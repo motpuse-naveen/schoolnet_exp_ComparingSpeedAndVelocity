@@ -152,6 +152,7 @@ function addTrailBack(paramTickValX, paramTickValX2Int, parammoveback) {
 }
 
 $(document).on("click", "#btn_go", function (event) {
+    $(".scalewrapper").removeAttr("style");
     secCount = 0
     tickvalX = 0;
     tickvalX2 = 0;
@@ -161,6 +162,7 @@ $(document).on("click", "#btn_go", function (event) {
 });
 
 $(document).on("click", "#next_btn", function (event) {
+    $(".scalewrapper").removeAttr("style");
     var randInt = randomInteger(0,4);
     var trailImgName = trailColorArray[randInt];
     $(".trailImg").attr("src", "assets/images/" + trailImgName)
