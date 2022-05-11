@@ -51,7 +51,7 @@ var ActivityShell = (function () {
       SpeedVelocityChart.initSpeedVsTime([{ "x": 0, "y": 0 }], 280, 230);
       SpeedVelocityChart.initVelocityVsTime([{ "x": 0, "y": 0 }], 280, 230);
       SpeedVelocity.Launch();
-      /*
+      
       if (zoom1 == null) {
         hammerIt(document.querySelector(".zoom1"));
         zoom1 = "zoom1";
@@ -62,6 +62,7 @@ var ActivityShell = (function () {
         zoom2 = "zoom2";
         //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
       }
+      /*
       if (zoom3 == null) {
         hammerIt(document.querySelector(".zoom3"));
         zoom3 = "zoom1";
@@ -71,8 +72,7 @@ var ActivityShell = (function () {
         hammerIt(document.querySelector(".zoom4"));
         zoom3 = "zoom4";
         //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
-      }
-      */
+      }*/
     },
     AdjustContainerHeight: function () {
       var deviceType = ActivityShell.DeviceType();
@@ -252,7 +252,7 @@ var ActivityShell = (function () {
 
 $(document).ready(function () {
   ActivityShell.Init();
-  /*
+  
   document.addEventListener('gesturestart', function (e) {
     e.preventDefault();
   });
@@ -268,7 +268,7 @@ $(document).ready(function () {
     hammerIt(document.querySelector("body"),1);
     zoombody = "zoombody";
   }
-  */
+  
 });
 /*
 document.ontouchmove = function(event){

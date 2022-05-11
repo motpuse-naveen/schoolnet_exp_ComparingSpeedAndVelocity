@@ -565,3 +565,7 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+.graphWrapper{
+  overflow: hidden;
+}

@@ -1,5 +1,5 @@
 html,body{
-    /*touch-action: pan-x pan-y;*/
+    touch-action: pan-x pan-y;
 }
 html{
     position: fixed;
@@ -59,7 +59,7 @@ body[platform="ios"]{
 
 .popup,
 .cust-popup{
-    /*touch-action: pan-x pan-y;*/
+    touch-action: pan-x pan-y;
 }
 
 /* launch Screen*/
