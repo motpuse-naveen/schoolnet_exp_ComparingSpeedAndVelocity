@@ -252,14 +252,14 @@
     margin-left: auto;
     margin-right: 1rem;
     margin: auto;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
   }
 
   .graphContainer.rightmargin {
     margin-left: 1rem;
     margin-right: auto;
     margin: auto;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
   }
 
   .rowGraphContainer {
@@ -399,7 +399,7 @@
 
   .graphContainer.leftmargin {
     margin: auto;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
     margin-left: auto;
     margin-right: 1rem;
 
@@ -407,7 +407,7 @@
 
   .graphContainer.rightmargin {
     margin: auto;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
     margin-left: 1rem;
     margin-right: auto;
    
@@ -455,11 +455,11 @@
 }
 
 @media screen and (orientation: portrait) and (min-device-height: 890px) {
-  .rowGraphContainer {
+  /*.rowGraphContainer {
     transform: scale(0.8);
     transform-origin: center top;
     height: auto;
-  }
+  }*/
   .graphWrapper{
     margin-top: 1rem;
   }
@@ -487,6 +487,6 @@
   .graphContainer.rightmargin{
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0.5rem;
   }
-
 }

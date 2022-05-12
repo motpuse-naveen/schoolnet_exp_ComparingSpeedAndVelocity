@@ -22,7 +22,7 @@ function hammerIt(elm, p_maxScale) {
         p_maxScale = 4
 
     hammertime.on('doubletap pan pinch panend pinchend', function (ev) {
-        if (ev.type == "doubletap") {
+        /*if (ev.type == "doubletap") {
             transform =
                 "translate3d(0, 0, 0) " +
                 "scale3d(2, 2, 1) ";
@@ -39,7 +39,7 @@ function hammerIt(elm, p_maxScale) {
             } catch (err) { }
             el.style.webkitTransform = transform;
             transform = "";
-        }
+        }*/
 
         //pan  
         //alert(ev.type);

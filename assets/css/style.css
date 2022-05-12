@@ -374,6 +374,7 @@ div.closepopup {
   right: 20px;
   top: 15px;
   margin-top: -5px;
+  display: none;
 }
 
 .btn-close-popup,
@@ -566,6 +567,3 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
   overflow-x: hidden;
 }
 
-.graphWrapper{
-  overflow: hidden;
-}

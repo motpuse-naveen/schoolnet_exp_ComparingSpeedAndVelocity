@@ -62,12 +62,13 @@ var ActivityShell = (function () {
         zoom2 = "zoom2";
         //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
       }
-      /*
+      
       if (zoom3 == null) {
         hammerIt(document.querySelector(".zoom3"));
         zoom3 = "zoom1";
         //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
       }
+      /*
       if (zoom4 == null) {
         hammerIt(document.querySelector(".zoom4"));
         zoom3 = "zoom4";
