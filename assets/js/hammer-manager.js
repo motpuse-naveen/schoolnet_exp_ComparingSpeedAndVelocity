@@ -1,11 +1,13 @@
 function hammerIt(elm, p_maxScale) {
     hammertime = new Hammer(elm, {
-        prevent_default: true
-        //touchAction: "pan"
+        prevent_default: true,
+        touchAction: "pan-x pan-y"
     });
     hammertime.get('pinch').set({
         enable: true
     });
+    hammertime.get('pan').set({ threshold: 20, pointers:2 });
+
     var posX = 0,
         posY = 0,
         scale = 1,
@@ -16,12 +18,17 @@ function hammerIt(elm, p_maxScale) {
         max_pos_y = 0,
         transform = "",
         el = elm;
+    /*
+    var lastDeltaX = 0,
+        lastDeltaY = 0,
+        last_posPanX = 0,
+        last_posPanY = 0;
+        */
 
-
-    if(typeof p_maxScale == 'undefined')
+    if (typeof p_maxScale == 'undefined')
         p_maxScale = 4
 
-    hammertime.on('doubletap pan pinch panend pinchend', function (ev) {
+    hammertime.on('doubletap pan pinch panend pinchend touch touchmove', function (ev) {
         /*if (ev.type == "doubletap") {
             transform =
                 "translate3d(0, 0, 0) " +
@@ -61,8 +68,6 @@ function hammerIt(elm, p_maxScale) {
                 posY = -max_pos_y;
             }
         }
-
-
         //pinch
         if (ev.type == "pinch") {
             scale = Math.max(.999, Math.min(last_scale * (ev.scale), p_maxScale));
@@ -71,8 +76,8 @@ function hammerIt(elm, p_maxScale) {
 
         //panend
         if (ev.type == "panend") {
-            last_posX = posX < max_pos_x ? posX : max_pos_x;
-            last_posY = posY < max_pos_y ? posY : max_pos_y;
+            last_posX = posX //< max_pos_x ? posX : max_pos_x;
+            last_posY = posY //< max_pos_y ? posY : max_pos_y;
         }
 
         if (scale != 1) {

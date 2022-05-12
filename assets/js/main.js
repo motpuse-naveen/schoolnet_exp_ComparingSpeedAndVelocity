@@ -3,6 +3,9 @@ var zoom1 = null;
 var zoom2 = null;
 var zoom3 = null;
 var zoom4 = null;
+var zoomhtml = null;
+var zoombody = null;
+
 var ActivityShell = (function () {
   return {
     Init: function () {
@@ -53,19 +56,19 @@ var ActivityShell = (function () {
       SpeedVelocity.Launch();
       
       if (zoom1 == null) {
-        hammerIt(document.querySelector(".zoom1"));
-        zoom1 = "zoom1";
+        //hammerIt(document.querySelector(".zoom1"));
+        //zoom1 = "zoom1";
         //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
       }
       if (zoom2 == null) {
         hammerIt(document.querySelector(".zoom2"));
         zoom2 = "zoom2";
-        //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
+        //new window.PinchZoom.default(document.querySelector('div.zoom2'), { maxZoom: 4,minZoom: 1});
       }
       
       if (zoom3 == null) {
-        hammerIt(document.querySelector(".zoom3"));
-        zoom3 = "zoom1";
+        //hammerIt(document.querySelector(".zoom3"));
+        //zoom3 = "zoom1";
         //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
       }
       /*
@@ -260,7 +263,7 @@ $(document).ready(function () {
   document.addEventListener('touchmove', function (e) {
     e.preventDefault();
   });
-  
+  /*
   if (zoomhtml == null) {
     hammerIt(document.querySelector("html"),1);
     zoomhtml = "zoomhtml";
@@ -269,7 +272,7 @@ $(document).ready(function () {
     hammerIt(document.querySelector("body"),1);
     zoombody = "zoombody";
   }
-  
+  */
 });
 /*
 document.ontouchmove = function(event){

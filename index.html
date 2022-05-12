@@ -79,44 +79,46 @@
         <div class="exp_body_header"></div>
         <div class="exp_body_content">
           <div id="split-main" class="split">
-            <div class="activityText">
-              <div class="otherdevice">
-                <p>In this exploriment the object moves forward for 3 seconds at a constant speed and backward for 2
-                  seconds. Suppose it move backwards at 4 cm/s, its speed is 4 cm/s. Its <span
-                    class="bold">VELOCITY</span>, however, is <span class="bold">-4 cm/s.</span> Velocity has direction,
-                  speed does not.</p>
+            <div class="contWraper zoom2">
+              <div class="activityText">
+                <div class="otherdevice">
+                  <p>In this exploriment the object moves forward for 3 seconds at a constant speed and backward for 2
+                    seconds. Suppose it move backwards at 4 cm/s, its speed is 4 cm/s. Its <span
+                      class="bold">VELOCITY</span>, however, is <span class="bold">-4 cm/s.</span> Velocity has
+                    direction,
+                    speed does not.</p>
+                </div>
+                <div class="mobiledevice less">
+                  <p>In this exploriment the object moves forward for 3 seconds ...<a
+                      class="linkactivityTextMore">More</a></p>
+                </div>
+                <div class="mobiledevice more">
+                  <p>In this exploriment the object moves forward for 3 seconds at a constant speed and backward for 2
+                    seconds. Suppose it move backwards at 4 cm/s, its speed is 4 cm/s. Its <span
+                      class="bold">VELOCITY</span>, however, is <span class="bold">-4 cm/s.</span> Velocity has
+                    direction,
+                    speed does not. <a class="linkactivityTextLess">Less</a></p>
+                </div>
               </div>
-              <div class="mobiledevice less">
-                <p>In this exploriment the object moves forward for 3 seconds ...<a
-                    class="linkactivityTextMore">More</a></p>
-              </div>
-              <div class="mobiledevice more">
-                <p>In this exploriment the object moves forward for 3 seconds at a constant speed and backward for 2
-                  seconds. Suppose it move backwards at 4 cm/s, its speed is 4 cm/s. Its <span
-                    class="bold">VELOCITY</span>, however, is <span class="bold">-4 cm/s.</span> Velocity has direction,
-                  speed does not. <a class="linkactivityTextLess">Less</a></p>
-              </div>
-            </div>
-            <div class="trailWrapper">
-              <div class="scalewrapper zoom1">
-                <div class="scaleContainer">
-                  <img class="scaleimg" src="assets/images/Numberline_01.svg">
-                  <div class="trail">
-                    <img class="trailImg" src="assets/images/object_01.svg">
-                  </div>
-                  <div class="trailback">
-                    <div class="vline"></div>
-                    <img class="trailImg" src="assets/images/object_02.svg">
-                    <div class="vlinespan">1 s</div>
+              <div class="trailWrapper">
+                <div class="scalewrapper">
+                  <div class="scaleContainer">
+                    <img class="scaleimg" src="assets/images/Numberline_01.svg">
+                    <div class="trail">
+                      <img class="trailImg" src="assets/images/object_01.svg">
+                    </div>
+                    <div class="trailback">
+                      <div class="vline"></div>
+                      <img class="trailImg" src="assets/images/object_02.svg">
+                      <div class="vlinespan">1 s</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="graphWrapper">
-              <div class="row rowGraphContainer " style="margin: 0px;">
-                <div class="col zoom2">
-                  <div class="graphContainer leftmargin ">
-                    <div class="">
+              <div class="graphWrapper">
+                <div class="row rowGraphContainer " style="margin: 0px;">
+                  <div class="col">
+                    <div class="graphContainer leftmargin ">
                       <div class="graphHead">Speed v/s Time</div>
                       <div class="graphbody">
                         <div id="graphSpeedVsTime" class="graphSpeedVsTime">
@@ -124,10 +126,8 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col zoom3">
-                  <div class="graphContainer rightmargin">
-                    <div class="">
+                  <div class="col">
+                    <div class="graphContainer rightmargin">
                       <div class="graphHead">Velocity v/s Time</div>
                       <div class="graphbody">
                         <div id="graphVelocityVsTime" class="graphVelocityVsTime">
@@ -183,7 +183,8 @@
                   <p>
                     The trails below show the movement forward at 10 cm/s for 3 secs and backward at 7 cm/s for 2 secs.
                   </p>
-                  <div style="text-align: center;" class="instr-scale-wrapper"><img src="assets/images/instr-scale.png"
+                  <div style="text-align: center;" class="instr-scale-wrapper"><img
+                      src="assets/images/instr-scale.png"
                       style="max-width: 100%; width: 640px;border: 1px solid #999;" class="zoom4"></div>
                   <p>&nbsp;</p>
                 </div>
@@ -428,6 +429,7 @@
   <script src="assets/js/screen_splitter.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/activity.js"></script>
+  <!--<script type="text/javascript" src="assets/plugins/pinch-zoom.umd.min.js"></script>-->
 
 </body>
 

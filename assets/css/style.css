@@ -566,4 +566,10 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
   overflow-y: auto;
   overflow-x: hidden;
 }
+/*
+.contWraper .activityText, .contWraper .trailWrapper, .contWraper .graphWrapper{
+  touch-action: pan-x pan-y;
+}
+*/
+
 
