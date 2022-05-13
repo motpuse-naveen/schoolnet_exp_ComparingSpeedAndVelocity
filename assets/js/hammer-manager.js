@@ -6,7 +6,7 @@ function hammerIt(elm, p_maxScale) {
     hammertime.get('pinch').set({
         enable: true
     });
-    hammertime.get('pan').set({ threshold: 20, pointers:2 });
+    hammertime.get('pan').set({ threshold: 0, pointers:2 });
 
     var posX = 0,
         posY = 0,
@@ -18,13 +18,7 @@ function hammerIt(elm, p_maxScale) {
         max_pos_y = 0,
         transform = "",
         el = elm;
-    /*
-    var lastDeltaX = 0,
-        lastDeltaY = 0,
-        last_posPanX = 0,
-        last_posPanY = 0;
-        */
-
+        
     if (typeof p_maxScale == 'undefined')
         p_maxScale = 4
 
@@ -47,9 +41,7 @@ function hammerIt(elm, p_maxScale) {
             el.style.webkitTransform = transform;
             transform = "";
         }*/
-
-        //pan  
-        //alert(ev.type);
+        
         if (scale != 1) {
             posX = last_posX + ev.deltaX;
             posY = last_posY + ev.deltaY;
@@ -76,8 +68,8 @@ function hammerIt(elm, p_maxScale) {
 
         //panend
         if (ev.type == "panend") {
-            last_posX = posX //< max_pos_x ? posX : max_pos_x;
-            last_posY = posY //< max_pos_y ? posY : max_pos_y;
+            last_posX = posX < max_pos_x ? posX : max_pos_x;
+            last_posY = posY < max_pos_y ? posY : max_pos_y;
         }
 
         if (scale != 1) {
