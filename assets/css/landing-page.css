@@ -384,5 +384,11 @@ body {
     .small-height-landscape[device="tablet"] .titlemobilelandscape{
         display: block !important;
     }
+    .small-height-landscape[device="tablet"] #split-main{
+        touch-action: pan-x pan-y !important;
+    }
+    .small-height-landscape[device="tablet"] .contWraper.zoom2{
+        touch-action: pan-x pan-y !important;
+    }
     
 }

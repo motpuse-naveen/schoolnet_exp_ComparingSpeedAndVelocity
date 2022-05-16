@@ -14,22 +14,22 @@ var ActivityShell = (function () {
       })
       var deviceType = ActivityShell.DeviceType();
       //alert("dt: " + deviceType + ", wdt: " + window.screen.width + ", ht: " + window.screen.height )
-      $(".wrapper").attr("device",deviceType);
-      if(this.IsIOSDevice()){
-        $("body").attr("platform","ios")
+      $(".wrapper").attr("device", deviceType);
+      if (this.IsIOSDevice()) {
+        $("body").attr("platform", "ios")
       }
-      else{
-        if(deviceType == "desktop"){
+      else {
+        if (deviceType == "desktop") {
           $(".wrapper").addClass("center-screen");
         }
       }
-      if(deviceType=="mobile"){
+      if (deviceType == "mobile") {
         if (window.matchMedia("(orientation: portrait)").matches) {
           $("#bestviewed_popup_msg").hide();
         }
-        else{
+        else {
           $("#bestviewed_popup_msg").show();
-          
+
         }
       }
       this.InitToolTip();
@@ -54,29 +54,11 @@ var ActivityShell = (function () {
       SpeedVelocityChart.initSpeedVsTime([{ "x": 0, "y": 0 }], 280, 230);
       SpeedVelocityChart.initVelocityVsTime([{ "x": 0, "y": 0 }], 280, 230);
       SpeedVelocity.Launch();
-      
+
       if (zoom1 == null) {
-        //hammerIt(document.querySelector(".zoom1"));
-        //zoom1 = "zoom1";
-        //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
+        hammerItScrollableContent(document.querySelector(".zoom1"));
+        zoom1 = "zoom1";
       }
-      if (zoom2 == null) {
-        hammerIt(document.querySelector(".zoom2"));
-        zoom2 = "zoom2";
-        //new window.PinchZoom.default(document.querySelector('div.zoom2'), { maxZoom: 4,minZoom: 1});
-      }
-      
-      if (zoom3 == null) {
-        //hammerIt(document.querySelector(".zoom3"));
-        //zoom3 = "zoom1";
-        //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
-      }
-      /*
-      if (zoom4 == null) {
-        hammerIt(document.querySelector(".zoom4"));
-        zoom3 = "zoom4";
-        //new window.PinchZoom.default(document.querySelector('div.zoom2'), { });
-      }*/
     },
     AdjustContainerHeight: function () {
       var deviceType = ActivityShell.DeviceType();
@@ -86,7 +68,7 @@ var ActivityShell = (function () {
           "height": window.innerHeight + "px"
         });
       }
-      else{
+      else {
         $(".wrapper").css({
           "height": window.innerHeight + "px"
         });
@@ -99,19 +81,19 @@ var ActivityShell = (function () {
         var mainHt = $(".container-so.main").height();
         if (deviceType != "mobile") {
         }
-        else{
-          $(".wrapper").attr("device","mobile");
-          headerHt = 0; 
+        else {
+          $(".wrapper").attr("device", "mobile");
+          headerHt = 0;
           //mainHt =  window.screen.height; 
         }
-        $(".exp_body_content").css({ "height": (mainHt - (headerHt + footerHt))});
+        $(".exp_body_content").css({ "height": (mainHt - (headerHt + footerHt)) });
       }
     },
-    AdjustSmallTablet: function(){
+    AdjustSmallTablet: function () {
       $(".wrapper").removeClass("small-height-landscape").removeClass("extra-small-height-landscape")
       var bodyHt = $("body").height()
       bodyHt = Number(bodyHt)
-      if(bodyHt<440){
+      if (bodyHt < 440) {
         $(".wrapper").addClass("small-height-landscape")
       }
     },
@@ -120,10 +102,10 @@ var ActivityShell = (function () {
       below code is not working for ipad it returns desktop */
       const ua = navigator.userAgent;
       if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-        if(window.screen.availWidth<530 || window.screen.availHeight<530){
+        if (window.screen.availWidth < 530 || window.screen.availHeight < 530) {
           return "mobile";
         }
-        else{
+        else {
           return "tablet";
         }
       }
@@ -148,7 +130,7 @@ var ActivityShell = (function () {
     AdjustSplitPanelsOnClosePopup: function ($popup) {
       var deviceType = ActivityShell.DeviceType();
       if (deviceType != "mobile") {
-        $("#split-main").css({ "width": $(".wrapper").width()});
+        $("#split-main").css({ "width": $(".wrapper").width() });
       }
     },
     AdjustSplitPanelsOnCloseCustomPopup: function () {
@@ -156,7 +138,7 @@ var ActivityShell = (function () {
       if (deviceType == "mobile") {
         $("#split-main").css({ "height": "100%" });
       }
-    }, 
+    },
     /*TogglePopup: function($popup, $button){
       if (!$popup.is(":visible")) {
         $(".popup").hide();
@@ -199,26 +181,26 @@ var ActivityShell = (function () {
         ActivityShell.AdjustSplitPanelsOnClosePopup($popup)
       }
     },
-    OnOrientationChange: function(){     
+    OnOrientationChange: function () {
       $("#split-main").removeAttr("style");
       this.AdjustContainerHeight();
       if ($(".popup").is(":visible")) {
         this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"))
       }
       var deviceType = ActivityShell.DeviceType();
-      if(deviceType=="mobile"){
+      if (deviceType == "mobile") {
         if (window.matchMedia("(orientation: portrait)").matches) {
           $("#bestviewed_popup_msg").hide();
           setScaleValue();
         }
-        else{
+        else {
           $("#bestviewed_popup_msg").show();
         }
       }
       GuidedTour.OnResize();
       this.AdjustSmallTablet();
     },
-    IsIOSDevice: function(){
+    IsIOSDevice: function () {
       if (/iPad|iPhone|iPod/.test(navigator.platform)) {
         return true;
       } else {
@@ -227,9 +209,9 @@ var ActivityShell = (function () {
           /MacIntel/.test(navigator.platform);
       }
     },
-    OnWindowResize: function(){
+    OnWindowResize: function () {
       var deviceType = this.DeviceType();
-      if(deviceType == "desktop"){
+      if (deviceType == "desktop") {
         this.AdjustContainerHeight();
         //ScreenSplitter.InitSplitter();
         /*
@@ -237,17 +219,17 @@ var ActivityShell = (function () {
           this.AdjustSplitPanelsOnOpenPopup($(".popup:visible"));
         }*/
         /* Scale Spring to fit */
-      //ScreenSplitter.ScaleToFit($("#split-0"));
-      /* Scale Graph to fit */
-      //ScreenSplitter.ScaleToFit($("#split-1"));
+        //ScreenSplitter.ScaleToFit($("#split-0"));
+        /* Scale Graph to fit */
+        //ScreenSplitter.ScaleToFit($("#split-1"));
       }
       GuidedTour.OnResize();
     },
-    InitToolTip: function(){
+    InitToolTip: function () {
       var deviceType = ActivityShell.DeviceType();
       if (deviceType == "desktop") {
-        if(!this.IsIOSDevice()){
-          $("button[data-toggle='tooltip']").tooltip({ boundary: 'window', container: $(".wrapper"), trigger: "hover",delay: { show: 500, hide: 100 } })
+        if (!this.IsIOSDevice()) {
+          $("button[data-toggle='tooltip']").tooltip({ boundary: 'window', container: $(".wrapper"), trigger: "hover", delay: { show: 500, hide: 100 } })
         }
       }
     }
@@ -256,7 +238,7 @@ var ActivityShell = (function () {
 
 $(document).ready(function () {
   ActivityShell.Init();
-  
+
   document.addEventListener('gesturestart', function (e) {
     e.preventDefault();
   });
@@ -289,7 +271,7 @@ $(window).bind('orientationchange', function () {
   }, 200);
 });
 
-$(window).resize(function() {
+$(window).resize(function () {
   ActivityShell.OnWindowResize();
 });
 
@@ -298,13 +280,13 @@ $(document).on("click", "#btn_launch", function (event) {
 });
 /*Common Popup*/
 $(document).on("click", "#btn_sheet", function (event) {
-  ActivityShell.TogglePopup($(".popup.worksheet"),$(this));
+  ActivityShell.TogglePopup($(".popup.worksheet"), $(this));
 });
 $(document).on("click", "#btn_info", function (event) {
   ActivityShell.TogglePopup($(".popup.info"), $(this));
 });
 $(document).on("click", "#btn_procedure", function (event) {
-  ActivityShell.TogglePopup($(".popup.procedure"),$(this));
+  ActivityShell.TogglePopup($(".popup.procedure"), $(this));
 });
 
 $(document).on("click", ".btn-close-popup", function (event) {

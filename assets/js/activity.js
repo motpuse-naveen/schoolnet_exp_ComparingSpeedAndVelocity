@@ -52,7 +52,7 @@ function newQuestion() {
     myVelocity1 = velc.v1;
     myVelocity2 = velc.v2;
     //myVelocity1 = 10;
-    console.log(myVelocity1, myVelocity2)
+    //console.log(myVelocity1, myVelocity2)
     $(".trail").css({ "left": origBallX + "px" })
     $(".trail").css({ "top": origBallY + "px" })
     $(".trail").show();

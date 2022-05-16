@@ -120,6 +120,8 @@
 .container-so.main .exp_header .header .rightpan {
   margin-left: 1em;
   display: table;
+  display: flex;
+  align-items: center;
 }
 .container-so.main .exp_header .header .main-src-logo {
   width: 96px;
@@ -374,7 +376,6 @@ div.closepopup {
   right: 20px;
   top: 15px;
   margin-top: -5px;
-  display: none;
 }
 
 .btn-close-popup,
@@ -566,10 +567,9 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
   overflow-y: auto;
   overflow-x: hidden;
 }
-/*
-.contWraper .activityText, .contWraper .trailWrapper, .contWraper .graphWrapper{
-  touch-action: pan-x pan-y;
+
+.zoom1{
+  transform-origin: 0 0;
 }
-*/
 
 
