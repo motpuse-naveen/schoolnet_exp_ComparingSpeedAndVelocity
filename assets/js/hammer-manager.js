@@ -59,8 +59,6 @@ function hammerIt(elm, p_maxScale) {
                 posY = -max_pos_y;
             }
         }
-
-
         //pinch
         if (ev.type == "pinch") {
             scale = Math.max(.999, Math.min(last_scale * (ev.scale), p_maxScale));
@@ -84,17 +82,15 @@ function hammerIt(elm, p_maxScale) {
         }
     });
 }
-
-
 function hammerItScrollableContent(elm, p_maxScale) {
     hammertime_scroll = new Hammer(elm, {
         prevent_default: true,
-        touchAction: "pan"
+        touchAction: "pan-X pan-Y"
     });
     hammertime_scroll.get('pinch').set({
         enable: true
     });
-    hammertime_scroll.get('pan').set({ enable: true, threshold: 30 });
+    hammertime_scroll.get('pan').set({ enable: true, threshold: 0 });
 
     var posX = 0, posY = 0, scale = 1, last_scale = 1, last_posX = 0, last_posY = 0, max_pos_x = 0,
         max_pos_y = 0, transform = "",
@@ -105,32 +101,25 @@ function hammerItScrollableContent(elm, p_maxScale) {
     if (typeof p_maxScale == 'undefined')
         p_maxScale = 4
 
-    hammertime_scroll.on('doubletap pinchstart pinch pinchend', function (ev) {
-
+    hammertime_scroll.on('doubletap panend pinchstart pinch pinchend', function (ev) {
         /*if (ev.type == "doubletap") {
             transform =
-                "translate3d(0, 0, 0) " +
-                "scale3d(2, 2, 1) ";
+                "translate3d(0,0,0) " +
+                "scale3d(2, 2, 1)";
             scale = 2;
             last_scale = 2;
             try {
                 if (window.getComputedStyle(el, null).getPropertyValue('-webkit-transform').toString() != "matrix(1, 0, 0, 1, 0, 0)") {
                     transform =
-                        "translate3d(0, 0, 0) " +
+                        "translate3d(" + 0 + "px," + 0 + "px, 0) " +
                         "scale3d(1, 1, 1) ";
                     scale = 1;
                     last_scale = 1;
                 }
             } catch (err) { }
-            el.style.webkitTransform = transform;
-            el.style.transformOrigin = "0 0;"
+            PZApplyScaleScrollable(el,scale)
             transform = "";
-            $(el.parentElement).scrollLeft((($(el).width() * scale) - $(el.parentElement).width()) / 2);
-            $(el.parentElement).scrollTop((($(el).height() * scale) - $(el.parentElement).height()) / 2);
-        }
-        */
-
-
+        }*/
         if (scale != 1) {
             posX = last_posX + ev.deltaX;
             posY = last_posY + ev.deltaY;
@@ -170,40 +159,18 @@ function hammerItScrollableContent(elm, p_maxScale) {
         }
         if (scale != 1) {
             transform =
-                //"translate3d(" + posX + "px," + posY + "px, 0) " +
-                "scale3d(" + scale + ", " + scale + ", 1)";
+            "translate3d(" + 0 + "px," + 0 + "px, 0) " +
+            "scale3d(" + scale + ", " + scale + ", 1)";
         }
         if (transform) {
-            el.style.transform = transform;
-            el.style.oTransform = transform;
-            el.style.msTransform = transform;
-            el.style.mozTransform = transform;
-            el.style.webkitTransform = transform;
-            el.style.webkitTransform = transform;
-            el.style.transformOrigin = "0 0;"
+            //el.style.transform = transform;
+            //el.style.webkitTransform = transform;
+            PZApplyScaleScrollable(el,scale)
             if (ev.type == "pinch") {
                 try {
-                    //SetScroll to center of screen
-                    //$(el.parentElement).scrollLeft((($(el).width() * scale) - $(el.parentElement).width()) / 2);
-                    //$(el.parentElement).scrollTop((($(el).height() * scale) - $(el.parentElement).height()) / 2);
                     if (scale < p_maxScale) {
                         $(el.parentElement).scrollLeft((initScrollLeft * ev.scale));
                         $(el.parentElement).scrollTop((initScrollTop * ev.scale));
-                    }
-
-                    if (initScrollLeft == 0 && initScrollTop == 0) {
-                        //$(el.parentElement).scrollLeft((($(el).width() * scale) - $(el.parentElement).width()) / 2);
-                        //$(el.parentElement).scrollTop((($(el).height() * scale) - $(el.parentElement).height()) / 2);
-                    }
-                    else {
-                        /*
-                        var scrollh = el.parentElement.offsetHeight - (el.offsetHeight*scale);
-                        var halfHt = Math.abs(scrollh)/2
-                        var scrollW = el.parentElement.offsetWidth - (el.offsetWidth*scale);
-                        var halfWt = Math.abs(scrollW)/2
-                        */
-                        //$(el.parentElement).scrollLeft((initScrollLeft * ev.scale));
-                        //$(el.parentElement).scrollTop((initScrollTop * ev.scale));
                     }
                 }
                 catch (err) { }
@@ -211,3 +178,17 @@ function hammerItScrollableContent(elm, p_maxScale) {
         }
     });
 }
+
+
+function PZApplyScale(p_element, p_scale, p_translateX, p_translateY){
+    $(p_element).css({
+        "transform": "translate3d(" + p_translateX + "," + p_translateY + ",0) scale3d(" + p_scale + ", " + p_scale + ", 1)"
+    });
+}
+
+function PZApplyScaleScrollable(p_element, p_scale){
+    $(p_element).css({
+        "transform": "scale(" + p_scale + ")"
+    });
+}
+

@@ -76,7 +76,7 @@ var ScreenSplitter = (function () {
             // $(".gutter").append(verticalHandle);
         },
         ScaleToFit: function ($wrapper,$element, deltaWidth, deltaHeight) {
-            debugger;
+            //debugger;
             if($element==null || $element == undefined){
                 $element = $wrapper.find(".content-container");
             }

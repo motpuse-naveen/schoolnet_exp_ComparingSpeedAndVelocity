@@ -564,12 +564,11 @@ svg .cls-101{fill:none;stroke:var(--theme-pri-text-color);stroke-linecap:round;s
 
 .exp_body_content {
   position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
 }
-
+#split-main{
+  overflow:auto;
+}
 .zoom1{
-  transform-origin: 0 0;
+  transform-origin: left top;
 }
-
-

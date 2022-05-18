@@ -245,7 +245,7 @@ $(document).ready(function () {
   document.addEventListener('touchmove', function (e) {
     e.preventDefault();
   });
-  /*
+  
   if (zoomhtml == null) {
     hammerIt(document.querySelector("html"),1);
     zoomhtml = "zoomhtml";
@@ -254,7 +254,7 @@ $(document).ready(function () {
     hammerIt(document.querySelector("body"),1);
     zoombody = "zoombody";
   }
-  */
+  
 });
 /*
 document.ontouchmove = function(event){

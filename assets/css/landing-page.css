@@ -5,13 +5,17 @@ html{
     position: fixed;
     width: 100%;
     height: 100%;
-    -webkit-text-size-adjust: none
+    -webkit-text-size-adjust: none;
+    -webkit-overflow-scrolling: auto;
+    overflow: auto;
 }
 section.main-section{
     position: fixed;
     width: 100%;
     height: 100%;
     display: block;
+    -webkit-overflow-scrolling: auto;
+    overflow: auto;
 }
 body {
     font-family: 'Montserrat-Regular';
@@ -23,6 +27,8 @@ body {
     background: padding-box var(--body-background);
     /*overscroll-behavior-y: contain;
     touch-action: pan-y pan-x; */
+    -webkit-overflow-scrolling: auto;
+    overflow: auto;
 }
 .bodyWrapper{
     display: flex;
@@ -384,11 +390,4 @@ body {
     .small-height-landscape[device="tablet"] .titlemobilelandscape{
         display: block !important;
     }
-    .small-height-landscape[device="tablet"] #split-main{
-        touch-action: pan-x pan-y !important;
-    }
-    .small-height-landscape[device="tablet"] .contWraper.zoom2{
-        touch-action: pan-x pan-y !important;
-    }
-    
 }
