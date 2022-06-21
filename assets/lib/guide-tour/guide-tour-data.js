@@ -1,7 +1,7 @@
 const g_tour_steps = [
     {
         sourceElmIdQS: "#btn_info",
-        informationText: "Instructions - Describes the experiment.",
+        informationText: "Instructions - Describes the different steps of experiment.",
     },
     {
         sourceElmIdQS: "#btn_themes",
