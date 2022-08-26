@@ -238,20 +238,23 @@ var ActivityShell = (function () {
 
 $(document).ready(function () {
   ActivityShell.Init();
+
   document.addEventListener('gesturestart', function (e) {
     e.preventDefault();
   });
   document.addEventListener('touchmove', function (e) {
     e.preventDefault();
   });
+  
   if (zoomhtml == null) {
-    hammerIt(document.querySelector("html"), 1);
+    hammerIt(document.querySelector("html"),1);
     zoomhtml = "zoomhtml";
   }
   if (zoombody == null) {
-    hammerIt(document.querySelector("body"), 1);
+    hammerIt(document.querySelector("body"),1);
     zoombody = "zoombody";
   }
+  
 });
 /*
 document.ontouchmove = function(event){
@@ -283,7 +286,7 @@ $(document).on("click", "#btn_info", function (event) {
   ActivityShell.TogglePopup($(".popup.info"), $(this));
 });
 $(document).on("click", "#btn_procedure", function (event) {
-  ActivityShell.TogglePopup($(".popup.procedure"), $(this));
+  ActivityShell.TogglePopup($(".popup.ojective"), $(this));
 });
 
 $(document).on("click", ".btn-close-popup", function (event) {

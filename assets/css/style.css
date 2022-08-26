@@ -155,7 +155,7 @@
   overflow: auto;
 }
 .btn_info,
-.btn_themes {
+.btn_themes, .btn_procedure {
   height: 46px;
   width: 47px;
   margin: 1px;
@@ -185,11 +185,26 @@ div.footer-menu-container div.btn-wrap button:focus,
 div.btn-theme-wrap .btn_themes {
   box-shadow: none;
 }
-.btn-wrap-info {
+.btn-wrap-procedure {
   position: absolute;
   left: 0px;
   border-right: 1px solid var(--theme-menu-icon-sepr);
 }
+
+.btn-wrap-info {
+  position: absolute;
+  left: 46px;
+  border-right: 1px solid var(--theme-menu-icon-sepr);
+}
+
+.btn_procedure {
+  height: 46px;
+  width: 44px;
+  padding: 0px;
+  border-radius: 0;
+}
+
+
 /*End Main Screen*/
 
 /* MobileView Style */
