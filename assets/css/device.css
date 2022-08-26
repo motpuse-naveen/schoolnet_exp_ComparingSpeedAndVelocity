@@ -102,14 +102,14 @@
   background-color: #679F37;
   position: absolute;
   left: -14px;
-  top: -20px;
+  top: -34px;
   color: #FFFFFF;
   text-align: center;
   font-size: 12px;
 }
 
 .backlbl .vlinespan{
-  top: -27px;
+  top: -15px;
 }
 
 .graphContainer.leftmargin {
@@ -252,6 +252,10 @@
     font-size: 14px;
   }
 
+  .backlbl .vlinespan{
+    top: -27px;
+  }
+
   .graphContainer.leftmargin {
     margin-left: auto;
     margin-right: 1rem;
@@ -382,6 +386,9 @@
     color: #FFFFFF;
     text-align: center;
     font-size: 14px;
+  }
+  .backlbl .vlinespan{
+    top: -27px;
   }
 
 }
