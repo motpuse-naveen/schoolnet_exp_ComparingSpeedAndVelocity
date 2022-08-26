@@ -265,10 +265,10 @@ document.ontouchmove = function(event){
 }
 */
 
-$(window).bind('orientationchange', function () {
-  this.setTimeout(function () {
+window.addEventListener("orientationchange", (event) => {
+  setTimeout(function () {
     ActivityShell.OnOrientationChange();
-  }, 200);
+  }, 100);
 });
 
 $(window).resize(function () {
