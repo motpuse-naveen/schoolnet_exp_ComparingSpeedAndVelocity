@@ -91,6 +91,7 @@ function xVelocity() {
 }
 
 var GlobalSpeed = 0
+var BackLabel = 0;
 function StartTickInterval(myspeed, moveback) {
     GlobalSpeed = myspeed;
     tickInterval = setInterval(function () {
@@ -127,6 +128,9 @@ function addTrailBack(paramTickValX, paramTickValX2Int, parammoveback) {
                   </div>
                 `
         $(".scaleContainer").append(trailback)
+        if(parammoveback<=0){
+            $(".trailback.new").addClass("backlbl")
+        }
         $(".trailback.new").css({ "left": Math.abs(currPos.left), "top": currPos.top }).removeClass("new");
         secCount++;
     }
@@ -140,6 +144,7 @@ function addTrailBack(paramTickValX, paramTickValX2Int, parammoveback) {
 
         clearInterval(tickInterval);
         tickInterval = 0;
+        BackLabel =1;
         StartTickInterval(myVelocity2, -1)
     }
     if (tickvalX2 > 5) {
@@ -156,6 +161,7 @@ $(document).on("click", "#btn_go", function (event) {
     secCount = 0
     tickvalX = 0;
     tickvalX2 = 0;
+    BackLabel = 0;
     addTrailBack(0, 0, 1);
     StartTickInterval(myVelocity1, 1);
     $(this).hide();
