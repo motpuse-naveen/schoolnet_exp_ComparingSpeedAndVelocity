@@ -1,77 +1,225 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 357.68 34.4">
-    <defs>
-        <style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}.cls-2{fill:url(#linear-gradient);}.cls-3,.cls-4{font-size:10px;fill:#4b4b4b;}.cls-3{font-family:Montserrat-Regular, Montserrat;}.cls-4{font-family:Montserrat-Bold, Montserrat;font-weight:700;}</style>
-        <linearGradient id="linear-gradient" x1="1141" y1="-587.86" x2="1141" y2="-580.92" gradientTransform="translate(-963 586)" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#fff"/>
-            <stop offset="1"/>
-        </linearGradient>
-    </defs>
-    <g id="Layer_2" data-name="Layer 2">
-        <g id="Portrait">
-            <g id="page-01">
-                <g id="Layer_26" data-name="Layer 26">
-                    <line class="cls-1" x1="25.68" y1="4" x2="25.68" y2="14"/>
-                    <line class="cls-1" x1="31.76" y1="4" x2="31.76" y2="9"/>
-                    <line class="cls-1" x1="37.84" y1="4" x2="37.84" y2="9"/>
-                    <line class="cls-1" x1="43.92" y1="4" x2="43.92" y2="9"/>
-                    <line class="cls-1" x1="50" y1="4" x2="50" y2="9"/>
-                    <line class="cls-1" x1="56.08" y1="4" x2="56.08" y2="14"/>
-                    <line class="cls-1" x1="62.16" y1="4" x2="62.16" y2="9"/>
-                    <line class="cls-1" x1="68.24" y1="4" x2="68.24" y2="9"/>
-                    <line class="cls-1" x1="74.32" y1="4" x2="74.32" y2="9"/>
-                    <line class="cls-1" x1="80.4" y1="4" x2="80.4" y2="9"/>
-                    <line class="cls-1" x1="92.56" y1="4" x2="92.56" y2="9"/>
-                    <line class="cls-1" x1="98.64" y1="4" x2="98.64" y2="9"/>
-                    <line class="cls-1" x1="104.72" y1="4" x2="104.72" y2="9"/>
-                    <line class="cls-1" x1="110.8" y1="4" x2="110.8" y2="9"/>
-                    <line class="cls-1" x1="116.88" y1="4" x2="116.88" y2="14"/>
-                    <line class="cls-1" x1="122.96" y1="4" x2="122.96" y2="9"/>
-                    <line class="cls-1" x1="129.04" y1="4" x2="129.04" y2="9"/>
-                    <line class="cls-1" x1="135.12" y1="4" x2="135.12" y2="9"/>
-                    <line class="cls-1" x1="141.2" y1="4" x2="141.2" y2="9"/>
-                    <line class="cls-1" x1="153.36" y1="4" x2="153.36" y2="9"/>
-                    <line class="cls-1" x1="159.44" y1="4" x2="159.44" y2="9"/>
-                    <line class="cls-1" x1="165.52" y1="4" x2="165.52" y2="9"/>
-                    <line class="cls-1" x1="171.6" y1="4" x2="171.6" y2="9"/>
-                    <line class="cls-1" x1="177.68" y1="4" x2="177.68" y2="14"/>
-                    <line class="cls-1" x1="183.76" y1="4" x2="183.76" y2="9"/>
-                    <line class="cls-1" x1="189.84" y1="4" x2="189.84" y2="9"/>
-                    <line class="cls-1" x1="195.92" y1="4" x2="195.92" y2="9"/>
-                    <line class="cls-1" x1="202" y1="4" x2="202" y2="9"/>
-                    <line class="cls-1" x1="214.16" y1="4" x2="214.16" y2="9"/>
-                    <line class="cls-1" x1="220.24" y1="4" x2="220.24" y2="9"/>
-                    <line class="cls-1" x1="226.32" y1="4" x2="226.32" y2="9"/>
-                    <line class="cls-1" x1="232.4" y1="4" x2="232.4" y2="9"/>
-                    <line class="cls-1" x1="238.48" y1="4" x2="238.48" y2="14"/>
-                    <line class="cls-1" x1="244.56" y1="4" x2="244.56" y2="9"/>
-                    <line class="cls-1" x1="250.64" y1="4" x2="250.64" y2="9"/>
-                    <line class="cls-1" x1="256.72" y1="4" x2="256.72" y2="9"/>
-                    <line class="cls-1" x1="262.8" y1="4" x2="262.8" y2="9"/>
-                    <line class="cls-1" x1="274.96" y1="4" x2="274.96" y2="9"/>
-                    <line class="cls-1" x1="281.04" y1="4" x2="281.04" y2="9"/>
-                    <line class="cls-1" x1="287.12" y1="4" x2="287.12" y2="9"/>
-                    <line class="cls-1" x1="293.2" y1="4" x2="293.2" y2="9"/>
-                    <line class="cls-1" x1="299.28" y1="4" x2="299.28" y2="14"/>
-                    <line class="cls-1" x1="305.36" y1="4" x2="305.36" y2="9"/>
-                    <line class="cls-1" x1="311.44" y1="4" x2="311.44" y2="9"/>
-                    <line class="cls-1" x1="317.52" y1="4" x2="317.52" y2="9"/>
-                    <line class="cls-1" x1="323.6" y1="4" x2="323.6" y2="9"/>
-                    <line class="cls-1" x1="86.48" y1="4" x2="86.48" y2="14"/>
-                    <line class="cls-1" x1="147.28" y1="4" x2="147.28" y2="14.45"/>
-                    <line class="cls-1" x1="208.08" y1="4" x2="208.08" y2="14.45"/>
-                    <line class="cls-1" x1="268.88" y1="4" x2="268.88" y2="14.45"/>
-                    <line class="cls-1" x1="329.68" y1="4" x2="329.68" y2="14.45"/>
-                    <rect class="cls-2" width="356" height="4" transform="translate(356 4) rotate(180)"/>
-                </g>
-                <text class="cls-3" transform="translate(23 26)">0</text>
-                <text class="cls-3" transform="translate(81 26)">10</text>
-                <text class="cls-3" transform="translate(141 26)">20</text>
-                <text class="cls-3" transform="translate(203 26)">30</text>
-                <text class="cls-3" transform="translate(263 26)">40</text>
-                <text class="cls-3" transform="translate(324 26)">50</text>
-                <text class="cls-4" transform="translate(340 26)">cm</text>
-            </g>
-        </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 634.62 127.6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #bcbdc0;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+        fill-rule: evenodd;
+      }
+
+      .cls-11 {
+        fill: #fff;
+      }
+
+      .cls-12 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #e90200;
+      }
+
+      .cls-13 {
+        font-family: Montserrat-Bold, Montserrat;
+      }
+
+      .cls-13, .cls-14 {
+        fill: #4b4b4b;
+        font-size: 16px;
+      }
+
+      .cls-3 {
+        fill: #e4ea0a;
+      }
+
+      .cls-4 {
+        fill: #337d17;
+      }
+
+      .cls-5 {
+        fill: #68dd0c;
+      }
+
+      .cls-6 {
+        fill: #abb008;
+      }
+
+      .cls-7 {
+        fill: #231f20;
+      }
+
+      .cls-8 {
+        fill: #acacac;
+      }
+
+      .cls-14 {
+        font-family: Montserrat-Regular, Montserrat;
+      }
+
+      .cls-9 {
+        fill: #8c160e;
+      }
+    </style>
+    <symbol id="New_Symbol_5" data-name="New Symbol 5" viewBox="0 0 5.44 3.08">
+      <path class="cls-8" d="M0,0H5.44V3.08H0V0H0Z"/>
+    </symbol>
+  </defs>
+  <g id="Layer_12" data-name="Layer 12">
+    <g>
+      <polygon class="cls-7" points="634.62 82.13 349.88 82.13 349.88 75.27 634.62 75.27 634.62 82.13 634.62 82.13"/>
+      <polygon class="cls-1" points="634.62 76.28 349.88 76.28 349.88 75.27 634.62 75.27 634.62 76.28 634.62 76.28"/>
+      <polygon class="cls-7" points="351.4 82.13 0 82.13 0 75.27 351.4 75.27 351.4 82.13 351.4 82.13"/>
+      <polygon class="cls-1" points="351.4 76.28 0 76.28 0 75.27 351.4 75.27 351.4 76.28 351.4 76.28"/>
     </g>
+    <g>
+      <text class="cls-14" transform="translate(47.4 123.34)"><tspan x="0" y="0">0</tspan></text>
+      <text class="cls-14" transform="translate(150.91 123.34)"><tspan x="0" y="0">10</tspan></text>
+      <text class="cls-14" transform="translate(253.42 123.34)"><tspan x="0" y="0">20</tspan></text>
+      <text class="cls-14" transform="translate(359.86 123.34)"><tspan x="0" y="0">30</tspan></text>
+      <text class="cls-14" transform="translate(463.83 123.34)"><tspan x="0" y="0">40</tspan></text>
+      <text class="cls-14" transform="translate(571.54 123.34)"><tspan x="0" y="0">50</tspan></text>
+      <text class="cls-13" transform="translate(600.26 123.34)"><tspan x="0" y="0">cm</tspan></text>
+    </g>
+    <g>
+      <line class="cls-12" x1="52.05" y1="86.2" x2="52.05" y2="103.53"/>
+      <line class="cls-12" x1="62.58" y1="86.2" x2="62.58" y2="94.87"/>
+      <line class="cls-12" x1="73.12" y1="86.2" x2="73.12" y2="94.87"/>
+      <line class="cls-12" x1="83.65" y1="86.2" x2="83.65" y2="94.87"/>
+      <line class="cls-12" x1="94.19" y1="86.2" x2="94.19" y2="94.87"/>
+      <line class="cls-12" x1="104.73" y1="86.2" x2="104.73" y2="103.53"/>
+      <line class="cls-12" x1="115.26" y1="86.2" x2="115.26" y2="94.87"/>
+      <line class="cls-12" x1="125.8" y1="86.2" x2="125.8" y2="94.87"/>
+      <line class="cls-12" x1="136.33" y1="86.2" x2="136.33" y2="94.87"/>
+      <line class="cls-12" x1="146.87" y1="86.2" x2="146.87" y2="94.87"/>
+      <line class="cls-12" x1="167.94" y1="86.2" x2="167.94" y2="94.87"/>
+      <line class="cls-12" x1="178.48" y1="86.2" x2="178.48" y2="94.87"/>
+      <line class="cls-12" x1="189.01" y1="86.2" x2="189.01" y2="94.87"/>
+      <line class="cls-12" x1="199.55" y1="86.2" x2="199.55" y2="94.87"/>
+      <line class="cls-12" x1="210.09" y1="86.2" x2="210.09" y2="103.53"/>
+      <line class="cls-12" x1="220.62" y1="86.2" x2="220.62" y2="94.87"/>
+      <line class="cls-12" x1="231.16" y1="86.2" x2="231.16" y2="94.87"/>
+      <line class="cls-12" x1="241.69" y1="86.2" x2="241.69" y2="94.87"/>
+      <line class="cls-12" x1="252.23" y1="86.2" x2="252.23" y2="94.87"/>
+      <line class="cls-12" x1="273.3" y1="86.2" x2="273.3" y2="94.87"/>
+      <line class="cls-12" x1="283.84" y1="86.2" x2="283.84" y2="94.87"/>
+      <line class="cls-12" x1="294.37" y1="86.2" x2="294.37" y2="94.87"/>
+      <line class="cls-12" x1="304.91" y1="86.2" x2="304.91" y2="94.87"/>
+      <line class="cls-12" x1="315.45" y1="86.2" x2="315.45" y2="103.53"/>
+      <line class="cls-12" x1="325.98" y1="86.2" x2="325.98" y2="94.87"/>
+      <line class="cls-12" x1="336.52" y1="86.2" x2="336.52" y2="94.87"/>
+      <line class="cls-12" x1="347.05" y1="86.2" x2="347.05" y2="94.87"/>
+      <line class="cls-12" x1="357.59" y1="86.2" x2="357.59" y2="94.87"/>
+      <line class="cls-12" x1="378.66" y1="86.2" x2="378.66" y2="94.87"/>
+      <line class="cls-12" x1="389.2" y1="86.2" x2="389.2" y2="94.87"/>
+      <line class="cls-12" x1="399.73" y1="86.2" x2="399.73" y2="94.87"/>
+      <line class="cls-12" x1="410.27" y1="86.2" x2="410.27" y2="94.87"/>
+      <line class="cls-12" x1="420.81" y1="86.2" x2="420.81" y2="103.53"/>
+      <line class="cls-12" x1="431.34" y1="86.2" x2="431.34" y2="94.87"/>
+      <line class="cls-12" x1="441.88" y1="86.2" x2="441.88" y2="94.87"/>
+      <line class="cls-12" x1="452.41" y1="86.2" x2="452.41" y2="94.87"/>
+      <line class="cls-12" x1="462.95" y1="86.2" x2="462.95" y2="94.87"/>
+      <line class="cls-12" x1="484.02" y1="86.2" x2="484.02" y2="94.87"/>
+      <line class="cls-12" x1="494.56" y1="86.2" x2="494.56" y2="94.87"/>
+      <line class="cls-12" x1="505.09" y1="86.2" x2="505.09" y2="94.87"/>
+      <line class="cls-12" x1="515.63" y1="86.2" x2="515.63" y2="94.87"/>
+      <line class="cls-12" x1="526.17" y1="86.2" x2="526.17" y2="103.53"/>
+      <line class="cls-12" x1="536.7" y1="86.2" x2="536.7" y2="94.87"/>
+      <line class="cls-12" x1="547.24" y1="86.2" x2="547.24" y2="94.87"/>
+      <line class="cls-12" x1="557.77" y1="86.2" x2="557.77" y2="94.87"/>
+      <line class="cls-12" x1="568.31" y1="86.2" x2="568.31" y2="94.87"/>
+      <line class="cls-12" x1="157.41" y1="86.2" x2="157.41" y2="103.53"/>
+      <line class="cls-12" x1="262.77" y1="86.2" x2="262.77" y2="104.31"/>
+      <line class="cls-12" x1="368.13" y1="86.2" x2="368.13" y2="104.31"/>
+      <line class="cls-12" x1="473.49" y1="86.2" x2="473.49" y2="104.31"/>
+      <line class="cls-12" x1="578.85" y1="86.2" x2="578.85" y2="104.31"/>
+      <use width="5.44" height="3.08" transform="translate(154.69 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(165.22 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(175.76 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(186.29 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(196.83 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(207.37 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(217.9 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(228.44 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(238.97 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(249.51 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(260.05 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(270.58 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(28.3 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(38.84 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(49.38 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(59.91 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(70.45 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(80.98 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(91.52 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(102.06 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(112.59 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(123.13 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(133.66 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(144.2 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(281.12 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(291.65 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(302.19 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(312.73 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(323.26 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(333.8 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(344.33 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(354.87 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(365.41 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(375.94 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(386.61 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(397.14 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(407.68 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(418.21 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(428.75 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(439.29 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(449.82 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(460.36 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(470.89 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(481.43 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(491.97 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(502.37 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(512.91 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(523.45 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(533.98 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(544.52 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(555.05 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(565.59 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(576.13 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(586.66 80.94)" xlink:href="#New_Symbol_5"/>
+      <use width="5.44" height="3.08" transform="translate(597.2 80.94)" xlink:href="#New_Symbol_5"/>
+    </g>
+    <g>
+      <path class="cls-10" d="M618.08,0h0c4.54,0,8.26,3.72,8.26,8.26v12.91c0,4.54-3.72,8.26-8.26,8.26s-8.26-3.72-8.26-8.26V8.26c0-4.54,3.72-8.26,8.26-8.26Z"/>
+      <g>
+        <g>
+          <circle class="cls-11" cx="618.08" cy="5.57" r="3.72"/>
+          <g>
+            <path class="cls-5" d="M620.34,4.17c.25,.41,.4,.89,.4,1.4,0,1.47-1.19,2.66-2.66,2.66-1.13,0-2.1-.71-2.48-1.7,.47,.76,1.31,1.26,2.27,1.26,1.47,0,2.66-1.19,2.66-2.66,0-.34-.06-.67-.18-.96h0Zm-2.27-1.87c1.81,0,3.27,1.46,3.27,3.27s-1.46,3.27-3.27,3.27-3.27-1.46-3.27-3.27,1.46-3.27,3.27-3.27Z"/>
+            <path class="cls-4" d="M615.3,6.13c0-1.81,1.46-3.27,3.27-3.27,.9,0,1.71,.36,2.3,.95-.58-.9-1.6-1.5-2.75-1.5-1.81,0-3.27,1.46-3.27,3.27,0,.91,.37,1.73,.97,2.32-.33-.51-.52-1.12-.52-1.77h0Z"/>
+          </g>
+        </g>
+        <g>
+          <circle class="cls-11" cx="618.08" cy="14.71" r="3.72"/>
+          <g>
+            <path class="cls-3" d="M620.34,13.31c.25,.41,.4,.89,.4,1.4,0,1.47-1.19,2.66-2.66,2.66-1.13,0-2.1-.71-2.48-1.7,.47,.76,1.31,1.26,2.27,1.26,1.47,0,2.66-1.19,2.66-2.66,0-.34-.06-.67-.18-.96h0Zm-2.27-1.87c1.81,0,3.27,1.46,3.27,3.27s-1.46,3.27-3.27,3.27-3.27-1.46-3.27-3.27,1.46-3.27,3.27-3.27Z"/>
+            <path class="cls-6" d="M615.3,15.27c0-1.81,1.46-3.27,3.27-3.27,.9,0,1.71,.36,2.3,.95-.58-.9-1.6-1.5-2.75-1.5-1.81,0-3.27,1.46-3.27,3.27,0,.91,.37,1.73,.97,2.32-.33-.51-.52-1.12-.52-1.77h0Z"/>
+          </g>
+        </g>
+        <g>
+          <circle class="cls-11" cx="618.08" cy="23.85" r="3.72"/>
+          <g>
+            <path class="cls-2" d="M620.34,22.45c.25,.41,.4,.89,.4,1.4,0,1.47-1.19,2.66-2.66,2.66-1.13,0-2.1-.71-2.48-1.7,.47,.76,1.31,1.26,2.27,1.26,1.47,0,2.66-1.19,2.66-2.66,0-.34-.06-.67-.18-.96h0Zm-2.27-1.87c1.81,0,3.27,1.46,3.27,3.27s-1.46,3.27-3.27,3.27-3.27-1.46-3.27-3.27,1.46-3.27,3.27-3.27Z"/>
+            <path class="cls-9" d="M615.3,24.41c0-1.81,1.46-3.27,3.27-3.27,.9,0,1.71,.36,2.3,.95-.58-.9-1.6-1.5-2.75-1.5-1.81,0-3.27,1.46-3.27,3.27,0,.91,.37,1.73,.97,2.32-.33-.51-.52-1.12-.52-1.77h0Z"/>
+          </g>
+        </g>
+      </g>
+      <rect x="617.01" y="28.79" width="2.65" height="45.49"/>
+      <rect x="613.46" y="73.8" width="9.76" height="2.44" rx=".63" ry=".63"/>
+    </g>
+  </g>
 </svg>

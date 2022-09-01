@@ -237,7 +237,7 @@ body {
         padding-bottom: 8rem;
     }
     .launch_expl_title .exploriment_title h1 {
-        font-size: 35px;
+        font-size: 34px;
     }
 }
 /*Mobile Lanscape*/
@@ -288,7 +288,7 @@ body {
         padding: 1rem 0 1rem 0;
     }
     [device="mobile"] .launch_expl_title .exploriment_title h1 {
-        font-size: 35px;
+        font-size: 34px;
     }
 }
 /*Tablet Lanscape small screen*/

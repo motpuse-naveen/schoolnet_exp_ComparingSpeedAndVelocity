@@ -63,6 +63,7 @@
 
 .scaleimg {
   width: 100%;
+  margin-top: -47px;
 }
 
 .trail, .trailback {
@@ -207,6 +208,7 @@
 
   .scaleimg {
     width: 100%;
+    margin-top: -80px;
   }
 
   .trail, .trailback {
@@ -220,10 +222,11 @@
   }
 
   .trailImg {
-    width: 46px;
+    width: 50px;
     left: -23px;
     position: absolute;
-    top: 0px;
+    top: 3px;
+    height:25px;
   }
 
   .trailback {
@@ -232,13 +235,14 @@
   }
 
   .vline {
-    height: 30px;
+    height: 32px;
     width: 1px;
     background-color: black;
     position: absolute;
     left: 0px;
-    bottom: 0px;
+    bottom: -3px;
   }
+ 
 
   .vlinespan {
     width: 34px;
@@ -356,10 +360,11 @@
   }
 
   .trailImg {
-    width: 46px;
+    width: 50px;
     left: -23px;
     position: absolute;
-    top: 0px;
+    top: 3px;
+    height:25px;
   }
 
   .trailback {
@@ -368,12 +373,12 @@
   }
 
   .vline {
-    height: 30px;
+    height: 32px;
     width: 1px;
     background-color: black;
     position: absolute;
     left: 0px;
-    bottom: 0px;
+    bottom: -3px;
   }
 
   .vlinespan {

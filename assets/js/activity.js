@@ -10,7 +10,7 @@ var tickvalX2 = 0;
 
 var moveScaleVariable = Math.min(Math.abs(Number($(".scaleContainer").width())) / 3.9009, 111);
 
-var trailColorArray = ['A_01.svg','A_02.svg','A_03.svg','A_04.svg','A_05.svg']
+var trailColorArray = ['A_01.svg','A_02.svg','A_03.svg','A_04.svg']
 function randomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -123,7 +123,7 @@ function addTrailBack(paramTickValX, paramTickValX2Int, parammoveback) {
         var trailback = `
                   <div class="trailback new">
                     <div class="vline"></div>
-                    <img class="trailImg" src="assets/images/object_02.svg">
+                    <img class="trailImg" src="assets/images/object_02.png">
                     <div class="vlinespan">`+ secCount + ` s</div>
                   </div>
                 `
@@ -169,7 +169,7 @@ $(document).on("click", "#btn_go", function (event) {
 
 $(document).on("click", "#next_btn", function (event) {
     $(".contWraper").removeAttr("style");
-    var randInt = randomInteger(0,4);
+    var randInt = randomInteger(0,3);
     var trailImgName = trailColorArray[randInt];
     $(".trailImg").attr("src", "assets/images/" + trailImgName)
     newQuestion();

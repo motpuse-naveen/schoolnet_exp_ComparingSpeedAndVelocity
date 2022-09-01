@@ -7,7 +7,7 @@ var imgPreloadArray = new Array(
   "assets/images/Numberline_01.svg",
   "assets/images/Numberline_02.svg",
   "assets/images/Object_01.svg",
-  "assets/images/Object_02.svg",
+  "assets/images/Object_02.png",
   "assets/images/phone-landscape-pngrepo-com.png",
   "assets/images/phone-portrait-pngrepo-com.png",
   "assets/images/texture.svg",
@@ -21,7 +21,7 @@ var imgPreloadArray = new Array(
   "assets/images/A_02.svg",
   "assets/images/A_03.svg",
   "assets/images/A_04.svg",
-  "assets/images/A_05.svg",
+  
 );
 
 /*--Audio--*/

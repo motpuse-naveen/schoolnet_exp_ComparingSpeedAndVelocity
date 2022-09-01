@@ -61,7 +61,7 @@ var ActivityShell = (function () {
       }
       setTimeout(function(){
         GuidedTour.Init();
-      },100)
+      },400)
     },
     AdjustContainerHeight: function () {
       var deviceType = ActivityShell.DeviceType();
