@@ -112,6 +112,9 @@
 .backlbl .vlinespan{
   top: -15px;
 }
+.backlbl .vline {
+  height: 15px;
+}
 
 .graphContainer.leftmargin {
   margin-left: auto;
@@ -259,6 +262,9 @@
   .backlbl .vlinespan{
     top: -27px;
   }
+  .backlbl .vline {
+    height: 26px;
+  }
 
   .graphContainer.leftmargin {
     margin-left: auto;
@@ -394,6 +400,9 @@
   }
   .backlbl .vlinespan{
     top: -27px;
+  }
+  .backlbl .vline {
+    height: 26px;
   }
 
 }
