@@ -51,7 +51,9 @@ body {
 }
 .wrapper.activity{
     background-color: var(--theme-sec-background);
-    /*min-height: 100%;*/
+}
+.wrapper.activity[device="mobile"],.wrapper.activity[device="tablet"]{
+    min-height: 100%;
 }
 .center-screen{
     position: absolute;

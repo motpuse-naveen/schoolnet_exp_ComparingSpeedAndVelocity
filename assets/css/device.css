@@ -78,7 +78,7 @@
 
 .trailImg {
   width: 30px;
-  left: -15px;
+  left: -10px;
   position: absolute;
   top: 11px;
 }
@@ -93,7 +93,7 @@
   width: 1px;
   background-color: black;
   position: absolute;
-  left: 0px;
+  left: 4px;
   bottom: -13px;
 }
 
@@ -102,7 +102,7 @@
   height: 18px;
   background-color: #679F37;
   position: absolute;
-  left: -14px;
+  left: -10px;
   top: -34px;
   color: #FFFFFF;
   text-align: center;
@@ -223,7 +223,7 @@
 
   .trailImg {
     width: 50px;
-    left: -23px;
+    left: -19px;
     position: absolute;
     top: 3px;
     height:25px;
@@ -239,7 +239,7 @@
     width: 1px;
     background-color: black;
     position: absolute;
-    left: 0px;
+    left: 5px;
     bottom: -3px;
   }
 
@@ -251,7 +251,7 @@
     height: 20px;
     background-color: #679F37;
     position: absolute;
-    left: -17px;
+    left: -12px;
     top: -49px;
     color: #FFFFFF;
     text-align: center;
@@ -363,7 +363,7 @@
 
   .trailImg {
     width: 50px;
-    left: -23px;
+    left: -19px;
     position: absolute;
     top: 3px;
     height:25px;
@@ -379,7 +379,7 @@
     width: 1px;
     background-color: black;
     position: absolute;
-    left: 0px;
+    left: 5px;
     bottom: -3px;
   }
 
@@ -388,7 +388,7 @@
     height: 20px;
     background-color: #679F37;
     position: absolute;
-    left: -17px;
+    left: -12px;
     top: -49px;
     color: #FFFFFF;
     text-align: center;
@@ -513,10 +513,11 @@
   }
 }
 
-@media screen and (orientation: portrait) and (device-width: 600px){
+@media screen and (orientation: portrait) and (min-device-width: 590px){
 
   .trailImg{
       top: -11px !important;
+      left: -19px !important;
   }
   
 }

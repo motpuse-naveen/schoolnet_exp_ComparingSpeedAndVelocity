@@ -36,13 +36,13 @@ var ActivityShell = (function () {
       this.AdjustSmallTablet();
     },
     LaunchActivity: function () {
-      debugger;
+      //debugger;
       $(".wrapper").addClass("activity");
       var deviceType = ActivityShell.DeviceType();
       if (deviceType == "mobile") {
         //openFullscreen()
       }
-      $(".container-so.launch").fadeOut();
+      $(".container-so.launch").hide();
       $(".container-so.main").show();
       this.AdjustContainerHeight();
       //ScreenSplitter.InitSplitter();
