@@ -51,7 +51,6 @@ body {
 }
 .wrapper.activity{
     background-color: var(--theme-sec-background);
-    /*min-height: 100%;*/
 }
 .center-screen{
     position: absolute;
@@ -116,10 +115,10 @@ body {
     background-repeat: no-repeat;
     background-position: 0px -123px;
     background-size: 1024px;
-    width: 100%;
+    width: 1024px;
     height: 311px;
     position: absolute;
-    left: 0px;
+    left: -109px;
     top: 0;
     z-index: -1;
 }
@@ -344,7 +343,6 @@ body {
         background-position: 0px -72px;
         background-size: 1024px;
         height: 360px;
-        width:100%;
     }
     .launch_expl_logo {
         height: 135px;
@@ -392,19 +390,4 @@ body {
     .small-height-landscape[device="tablet"] .titlemobilelandscape{
         display: block !important;
     }
-}
-
-@media screen and (orientation: portrait) and (device-width: 600px){
-
-    .trailImg{
-        top: -11px !important;
-    }
-    
-}
-@media screen and (orientation: portrait) and (device-width: 712px){
-
-    .trailImg{
-        top: -11px !important;
-    }
-    
 }

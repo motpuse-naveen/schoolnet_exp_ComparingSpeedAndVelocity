@@ -36,6 +36,7 @@ var ActivityShell = (function () {
       this.AdjustSmallTablet();
     },
     LaunchActivity: function () {
+      debugger;
       $(".wrapper").addClass("activity");
       var deviceType = ActivityShell.DeviceType();
       if (deviceType == "mobile") {
@@ -55,10 +56,10 @@ var ActivityShell = (function () {
       SpeedVelocityChart.initVelocityVsTime([{ "x": 0, "y": 0 }], 280, 230);
       SpeedVelocity.Launch();
 
-      if (zoom1 == null) {
+      /*if (zoom1 == null) {
         hammerItScrollableContent(document.querySelector(".zoom1"));
         zoom1 = "zoom1";
-      }
+      }*/
       setTimeout(function(){
         GuidedTour.Init();
       },400)
@@ -242,21 +243,21 @@ var ActivityShell = (function () {
 $(document).ready(function () {
   ActivityShell.Init();
 
-  document.addEventListener('gesturestart', function (e) {
+ /* document.addEventListener('gesturestart', function (e) {
     e.preventDefault();
   });
   document.addEventListener('touchmove', function (e) {
     e.preventDefault();
-  });
+  });*/
   
-  if (zoomhtml == null) {
+  /*if (zoomhtml == null) {
     hammerIt(document.querySelector("html"),1);
     zoomhtml = "zoomhtml";
   }
   if (zoombody == null) {
     hammerIt(document.querySelector("body"),1);
     zoombody = "zoombody";
-  }
+  }*/
   
 });
 /*

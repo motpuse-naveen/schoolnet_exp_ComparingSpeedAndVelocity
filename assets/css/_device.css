@@ -242,8 +242,6 @@
     left: 0px;
     bottom: -3px;
   }
-
-  .backlbl .vline{height: 28px;}
  
 
   .vlinespan {
@@ -398,8 +396,6 @@
     top: -27px;
   }
 
-  .backlbl .vline{height: 28px;}
-
 }
 
 @media only screen and (min-width: 960px) {
@@ -432,7 +428,6 @@
     margin-right: auto;
    
   }
-  .backlbl .vline{height: 28px;}
 }
 
 @media only screen and (max-width: 750px) {
@@ -441,7 +436,6 @@
     padding: 10px 5px 10px 16px;
     background: #000;
   }
-  .backlbl .vline{height: 28px;}
 }
 
 @media screen and (orientation: portrait) and (max-device-height: 960px) {
@@ -511,19 +505,4 @@
     margin-right: auto;
     margin-top: 0.5rem;
   }
-}
-
-@media screen and (orientation: portrait) and (device-width: 600px){
-
-  .trailImg{
-      top: -11px !important;
-  }
-  
-}
-@media screen and (orientation: portrait) and (device-width: 712px){
-
-  .trailImg{
-      top: -11px !important;
-  }
-  
 }
