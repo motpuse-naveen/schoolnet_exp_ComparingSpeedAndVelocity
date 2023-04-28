@@ -36,7 +36,7 @@ var ActivityShell = (function () {
       this.AdjustSmallTablet();
     },
     LaunchActivity: function () {
-      //debugger;
+      debugger;
       $(".wrapper").addClass("activity");
       var deviceType = ActivityShell.DeviceType();
       if (deviceType == "mobile") {
